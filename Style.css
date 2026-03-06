@@ -1,0 +1,4085 @@
+.custom-nav {
+  background: linear-gradient(90deg, #000000, #0c7a8d);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.search-form {
+  position: relative;
+  width: 100%;
+  max-width: 280px;
+}
+
+/* Search input */
+.search-form input {
+  width: 100%;
+  padding: 8px 14px 8px 36px;
+  border-radius: 25px;
+  border: 2px solid #ccc;
+  outline: none;
+
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease,
+    background-color 0.3s ease;
+}
+
+/* Icon */
+.search-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #777;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Focus Animation */
+.search-form input:focus {
+  border-color: #00e5ff;
+  background-color: #f0fcff;
+  box-shadow: 0 0 0 4px rgba(0, 229, 255, 0.25);
+}
+
+/* Icon animation when focus */
+.search-form input:focus+.search-icon,
+.search-form:focus-within .search-icon {
+  color: #00e5ff;
+  transform: translateY(-50%) scale(1.2);
+}
+
+.navbar .nav-link.active i {
+  color: #d0ff00;
+}
+
+/* Common image */
+.slide-img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+/* Text + Button OUTSIDE */
+.outside-caption {
+  background: #0077a7;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Caption container */
+.custom-caption {
+  position: absolute;
+  inset: 0;
+}
+
+/* TEXT BOX */
+.caption-text-box {
+  position: absolute;
+  top: 10%;
+  left: 8%;
+  text-align: left;
+}
+
+.caption-title {
+  font-size: 2.5rem;
+  animation: textLeft 1s ease forwards;
+}
+
+.caption-text {
+  animation: textLeft 1.4s ease forwards;
+}
+
+@keyframes textLeft {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.caption-btn {
+  animation: btnFadeUp 1.4s ease forwards;
+}
+
+@keyframes btnFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+    /* */
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.carousel-item:not(.active) .caption-title,
+.carousel-item:not(.active) .caption-text,
+.carousel-item:not(.active) .caption-btn {
+  opacity: 0;
+  animation: none;
+}
+
+@media (max-width: 768px) {
+  /* စာသားတွေကို ဘယ်ဘက် ပြန်ကပ်ပေးခြင်း */
+  .custom-caption {
+    text-align: left !important;
+    padding-left: 10% !important; /* ဘေးဘောင်ကနေ နည်းနည်း ခွာပေးထားတယ် */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* စာသားကို အပေါ်အောက် အလယ်မှာထားမယ် */
+  }
+
+  .caption-text-box {
+    width: 100% !important;
+  }
+
+  /* ဖုန်းမှာ စာသားဆိုဒ်တွေ အရမ်းမကြီးအောင် ညှိခြင်း */
+  .caption-title {
+    font-size: 1.8rem !important;
+    color: #ffff00 !important; /* ဖုန်းမှာလည်း အဝါရောင်ဖြစ်အောင် */
+    text-shadow: 0 0 10px rgba(255, 255, 0, 0.5);
+  }
+
+  .caption-text {
+    font-size: 1rem !important;
+    color: #000000 !important;
+  }
+
+  /* ခလုတ်ကိုလည်း ဘယ်ဘက်ကပ်မယ် */
+  .btn-animate {
+    align-self: flex-start;
+    margin-top: 10px;
+  }
+}
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.carousel,
+.carousel-inner,
+.carousel-item {
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.carousel-item {
+  max-height: 600px;
+}
+
+.carousel-item img {
+  width: 100%;
+  /* အမြင့်ကို 600px (သို့) သင်ကြိုက်တဲ့ ဆိုဒ်တစ်ခုမှာ အသေထားလိုက်ပါ */
+  height: 900px !important; 
+  /* ပုံမပြဲသွားအောင် object-fit ကို သုံးရပါမယ် */
+  object-fit: cover; 
+  object-position: center;
+}
+
+.custom-caption {
+  inset: 0;
+  overflow: hidden;
+}
+
+.caption-text {
+  color: #bfcc45;
+  /* h4 */
+}
+
+.caption-title {
+  color: rgb(163, 65, 65);
+  /* h5 */
+}
+
+.caption-title {
+  color: #bb1c1c;
+  text-shadow: 0 3px 10px rgba(0, 0, 0, 0.6);
+}
+
+.caption-text {
+  color: #000000;
+}
+
+.first-slide .caption-title {
+  color: #000000;
+}
+
+.second-slide .caption-title {
+  color: #000000;
+}
+
+.third-slide .caption-title {
+  color: #000000;
+}
+/* ဖုန်းနဲ့ကြည့်ရင် ပုံက အရမ်းကြီးမနေအောင် အမြင့်ကို လျှော့ပေးပါ */
+@media (max-width: 768px) {
+  .carousel-item img {
+    height: 400px !important;
+  }
+}
+
+/* Arrow */
+.carousel-control-prev,
+.carousel-control-next {
+  width: 80px;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: drop-shadow(0 4px 10px rgba(5, 5, 5, 0.6));
+}
+
+/* Big Arrow */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  width: 5rem;
+  height: 5rem;
+  background-size: 100% 100%;
+}
+
+/* Arrow click backgroung */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgba(218, 209, 209, 0.4);
+  border-radius: 50%;
+  padding: 10px;
+}
+
+.btn-animate {
+  animation: btnUp 1.2s ease forwards;
+}
+
+/* Button */
+@keyframes btnUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Button Animation */
+.btn-animate {
+  transition: all 0.3s ease;
+}
+
+.btn-animate:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Hover Animation */
+.btn-animate {
+  transition: all 0.3s ease;
+}
+
+.btn-animate:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Pulse / Glow CTA */
+.btn-glow {
+  animation: glow 2s infinite;
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 0 rgba(0, 123, 255, 0.6);
+  }
+
+  70% {
+    box-shadow: 0 0 20px rgba(0, 123, 255, 0.6);
+  }
+
+  100% {
+    box-shadow: 0 0 0 rgba(0, 123, 255, 0.6);
+  }
+}
+
+/* Slide Change Animation Come */
+.btn-glow {
+  animation: glow 2s infinite;
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 0 rgba(0, 123, 255, 0.6);
+  }
+
+  70% {
+    box-shadow: 0 0 20px rgba(0, 123, 255, 0.6);
+  }
+
+  100% {
+    box-shadow: 0 0 0 rgba(0, 123, 255, 0.6);
+  }
+}
+
+/* Moblie safe fix */
+@media (max-width: 768px) {
+  .btn-animate:hover {
+    transform: none;
+    box-shadow: none;
+  }
+}
+
+/* Card */
+body {
+  font-family: "Poppins", sans-serif;
+  background: #fff;
+}
+
+.hero-card {
+  display: flex;
+  gap: 40px;
+  background: #dde1ee;
+  padding: 50px;
+  border-radius: 20px;
+  max-width: 1500px;
+  margin: auto;
+}
+
+/* LEFT */
+.hero-left {
+  flex: 1;
+}
+
+.badge-new {
+  background: #b5ff00;
+  color: #000;
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 6px;
+  margin-right: 10px;
+}
+
+.small-text {
+  font-size: 13px;
+  color: #555;
+}
+
+.hero-left h1 {
+  margin-top: 20px;
+  font-size: 36px;
+  line-height: 1.3;
+}
+
+.hero-left p {
+  margin-top: 15px;
+  max-width: 420px;
+  color: #333;
+}
+
+/* BUTTON */
+.btn-buy {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 25px;
+  padding: 12px 22px;
+  background: #000;
+  color: #fff;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn-buy:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* ARROWS */
+.hero-arrows {
+  margin-top: 40px;
+  display: flex;
+  gap: 15px;
+}
+
+.arrow-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid #999;
+  background: transparent;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.arrow-btn:hover {
+  background: #000;
+  color: #fff;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* RIGHT IMAGE */
+.hero-right img {
+  width: 380px;
+  height: 380px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+/* Featured */
+.google-hero {
+  background: #dde1eb;
+  border-radius: 20px;
+  padding: 40px;
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+/* LEFT */
+.hero-left {
+  flex: 1;
+}
+
+.badge {
+  background: #c6ff00;
+  color: #000;
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 6px;
+  margin-right: 10px;
+}
+
+.product-name {
+  font-size: 14px;
+  color: #555;
+}
+
+.hero-left h1 {
+  font-size: 36px;
+  margin: 16px 0;
+}
+
+.hero-left p {
+  color: #555;
+  line-height: 1.6;
+  max-width: 420px;
+}
+
+.price {
+  margin: 15px 0;
+  font-weight: 500;
+}
+
+.buy-btn {
+  background: #000;
+  color: #fff;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+/* NAV BUTTONS */
+.nav-btns {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+.nav-btns button {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid #999;
+  background: transparent;
+  cursor: pointer;
+}
+
+/* RIGHT IMAGE */
+.hero-right img {
+  width: 360px;
+  border-radius: 16px;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .google-hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-right img {
+    width: 100%;
+  }
+}
+/* ပုံကို စောင်းထားခြင်း */
+.hero-right img {
+    transition: 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+    transform: rotate(10deg); /* ညာဘက်ကို စောင်းထားမယ် */
+}
+
+/* Mouse တင်ရင် ပုံတည့်သွားပြီး Glow ထွက်လာခြင်း */
+.hero-card:hover .hero-right img {
+    transform: rotate(0deg) scale(1.05);
+    filter: drop-shadow(0 0 20px #ffff00);
+}
+/* featured */
+/* TITLE */
+.product-section {
+  padding: 50px 40px;
+  background: #000;
+}
+
+/* h4 heading */
+.section-heading {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  letter-spacing: 0.5px;
+}
+
+/* optional underline line */
+.section-heading::after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 2px;
+  background: #c6ff00;
+  margin-top: 8px;
+}
+
+/* h4 */
+.section-title {
+  font-size: 28px;
+  font-weight: 200px;
+  color: #faf9f9;
+  background-color: #000000;
+}
+
+/* TITLE */
+.card-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  padding: 40px;
+  background: #000;
+  margin-bottom: 60px;
+}
+
+/* CARD */
+.product-card {
+  background: #dde1eb;
+  border-radius: 20px;
+  padding: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* LEFT */
+.card-left {
+  max-width: 50%;
+}
+
+.badge {
+  background: #c6ff00;
+  padding: 4px 10px;
+  font-size: 12px;
+  border-radius: 6px;
+  margin-right: 8px;
+}
+
+.product-name {
+  font-size: 13px;
+  color: #555;
+}
+
+.card-left h2 {
+  font-size: 26px;
+  margin: 14px 0;
+}
+
+.card-left p {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.6;
+}
+
+.price {
+  margin: 12px 0;
+  font-weight: 500;
+}
+
+.buy-btn {
+  background: #000;
+  color: #fff;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+/* RIGHT IMAGE */
+.card-right img {
+  width: 220px;
+  border-radius: 14px;
+}
+
+/* 📱 MOBILE */
+@media (max-width: 900px) {
+  .card-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .product-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .card-left {
+    max-width: 100%;
+  }
+
+  .card-right img {
+    margin-top: 20px;
+  }
+}
+
+/* PAGE LOAD ANIMATION */
+.animate {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: cardFadeUp 0.9s ease forwards;
+}
+
+.delay-1 {
+  animation-delay: 0.25s;
+}
+
+@keyframes cardFadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* HOVER EFFECT */
+.product-card {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.25);
+}
+
+/* IMAGE ZOOM */
+.card-right img {
+  transition: transform 0.5s ease;
+}
+
+.product-card:hover .card-right img {
+  transform: scale(1.08);
+}
+
+/* icons */
+.meta-link {
+  color: #aaa;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.meta-link i {
+  font-size: 13px;
+  color: #888;
+}
+
+.meta-link:hover {
+  color: #fff;
+}
+
+.meta-link:hover i {
+  color: #ffc107;
+  /* accent */
+}
+
+/* Date */
+.meta-date i {
+  font-size: 13px;
+  color: #000000;
+}
+
+/* h2-link */
+.h2-link {
+  color: #000;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.h2-link:hover {
+  color: #5d6918;
+  /* accent */
+}
+
+/* See More */
+.see-more-wrap {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.see-more-link {
+  color: #c6ff00;
+  font-size: 14px;
+  text-decoration: none;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: 0.3s ease;
+}
+
+.see-more-wrap {
+  display: flex;
+  justify-content: flex-start;
+  /* left */
+  margin-top: 20px;
+}
+
+.see-more-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+
+  padding: 8px 18px;
+  border-radius: 20px;
+
+  border: 1px solid #c6ff00;
+  color: #c6ff00;
+  text-decoration: none;
+
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+.see-more-btn:hover {
+  background: #c6ff00;
+  color: #000;
+  gap: 10px;
+}
+
+@media (max-width: 600px) {
+  .see-more-wrap {
+    justify-content: center;
+  }
+}
+
+/* News */
+.news-section {
+  padding: 20px;
+  background: #000000;
+}
+
+/* SCROLL ROW */
+.horizontal-scroll {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  padding-bottom: 10px;
+  scroll-snap-type: x mandatory;
+}
+
+/* hide ugly scrollbar (optional) */
+.horizontal-scroll::-webkit-scrollbar {
+  height: 6px;
+}
+
+.horizontal-scroll::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 10px;
+}
+
+/* CARD */
+.news-card-row {
+  min-width: 340px;
+  background: #e9edf5;
+  border-radius: 16px;
+  padding: 14px;
+  display: flex;
+  gap: 12px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.news-card-row:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* IMAGE */
+.news-card-row img {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* TEXT */
+.news-text h5 {
+  font-size: 15px;
+  color: #111;
+  margin-bottom: 6px;
+}
+
+.news-text p {
+  font-size: 13px;
+  color: #444;
+  margin-bottom: 10px;
+}
+
+/* BUTTON */
+.card-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+
+  padding: 6px 14px;
+  border-radius: 999px;
+
+  background: transparent;
+  border: 1px solid #1a73e8;
+  color: #1a73e8;
+
+  font-size: 12px;
+  font-weight: 500;
+  text-decoration: none;
+
+  transition: 0.3s ease;
+}
+
+.card-btn:hover {
+  background: #1a73e8;
+  color: #fff;
+}
+
+/* Button */
+.see-more-wrap {
+  margin-top: 20px;
+  display: flex;
+  justify-content: flex-start;
+  /* left */
+}
+
+.see-more-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 10px 22px;
+  border-radius: 999px;
+
+  background: transparent;
+  border: 1px solid #c6ff00;
+  color: #c6ff00;
+
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+.see-more-btn i {
+  transition: transform 0.3s ease;
+}
+
+.see-more-btn:hover {
+  background: #c6ff00;
+  color: #000;
+}
+
+.see-more-btn:hover i {
+  transform: translateX(4px);
+}
+
+/* News */
+/* Latest devices */
+.category-grid-section {
+    background-color: #000;
+    width: 100%;
+}
+
+/* ခေါင်းစဉ်ကို ညာဘက်ကို နည်းနည်း တိုးထားခြင်း */
+.title-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 1px; /* ညာဘက်ကို တိုးချင်တဲ့ အကွာအဝေး */
+}
+
+.latest-title {
+    color: #fff;
+    font-family: 'Arial Black', sans-serif;
+    font-size: 1rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-bottom: 2px;
+}
+
+.yellow-underline {
+    width: 35px;
+    height: 3px;
+    background-color: #ccff00;
+}
+
+/* Category Card Layout */
+.cat-item-card {
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    margin-bottom: 20px; /* တန်းကြားအကွာအဝေး */
+}
+
+.cat-circle {
+    width: 120px;
+    height: 120px;
+    background: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 10px;
+    transition: all 0.4s ease;
+}
+
+.cat-circle img {
+    max-width: 60%;
+}
+
+.cat-label {
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* --- Hover Animation --- */
+.cat-item-card:hover .cat-circle {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(204, 255, 0, 0.3);
+    border: 2px solid #ccff00;
+}
+/* Latest devices */
+/* Filter Bar */
+/* Background & Global */
+body { background-color: #000; }
+.border-bottom-yellow { border-bottom: 2px solid #ffff00; }
+
+/* Filter Buttons Styling */
+.btn-jb-filter {
+    background: #fff; color: #000;
+    border: 1px solid #000; padding: 7px 18px;
+    font-size: 14px; font-weight: 800; border-radius: 4px;
+    transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    min-width: 240px;
+}
+
+.btn-jb-filter:hover, .btn-jb-filter.active {
+    background: #ffff00;
+    transform: translateY(-2px);
+    box-shadow: 0 0 15px rgba(255, 255, 0, 0.6);
+}
+
+/* Dropdown Slide & Glow Animation */
+.dropdown-anim {
+    display: block !important;
+    opacity: 0; visibility: hidden;
+    transform: translateY(15px);
+    transition: all 0.3s ease;
+    border: none; border-radius: 10px;
+    min-width: 280px; z-index: 1200;
+    background: #fff;
+}
+
+.dropdown:hover .dropdown-anim {
+    opacity: 1; visibility: visible;
+    transform: translateY(0);
+}
+
+.shadow-glow {
+    box-shadow: 0 10px 40px rgba(0,0,0,0.8), 0 0 20px rgba(255, 255, 0, 0.1);
+}
+
+/* Range Slider Styling (ပုံထဲကအတိုင်း အဝါရောင်) */
+.jb-range {
+    width: 100%; accent-color: #ffff00;
+}
+
+/* Search Box inside Dropdown */
+.search-inner {
+    display: flex; align-items: center;
+    background: #f1f1f1; padding: 6px 12px;
+    border-radius: 4px; border: 1px solid #ddd;
+}
+
+.search-inner input {
+    border: none; background: transparent;
+    outline: none; width: 100%; margin-left: 10px; font-size: 13px;
+}
+
+.search-inner:focus-within {
+    border-color: #ffff00;
+    box-shadow: 0 0 8px rgba(255, 255, 0, 0.5);
+}
+
+/* Scroll List Item Hover */
+.scroll-list { max-height: 200px; overflow-y: auto; }
+.item-row {
+    display: flex; align-items: center; padding: 8px 5px;
+    cursor: pointer; transition: 0.2s;
+}
+
+.item-row:hover {
+    background: #fffde6; color: #000; font-weight: bold;
+    padding-left: 10px;
+}
+
+.item-row span { flex-grow: 1; margin-left: 10px; font-size: 14px; }
+
+/* Sort Select Right Side */
+.jb-sort-select {
+    background: #fff; border: 2px solid #000;
+    padding: 6px 12px; font-weight: 800; font-size: 13px;
+    border-radius: 4px; transition: 0.3s;
+}
+
+.jb-sort-select:hover { box-shadow: 0 0 10px #ffff00; }
+/* Pure */
+/* ပထမအဆင့်: Hidden Card တွေကို ဖျောက်ထားမယ် */
+.hidden-card {
+    display: none;
+}
+
+/* ဒုတိယအဆင့်: Checkbox ကို နှိပ်လိုက်ရင် Hidden Card တွေကို ပြမယ် */
+#load-more-toggle:checked ~ #product-grid .hidden-card {
+    display: block;
+    animation: fadeInUp 0.6s ease forwards; /* ပေါ်လာရင် Animation လေးနဲ့ */
+}
+
+/* တတိယအဆင့်: နှိပ်ပြီးသွားရင် Load More ခလုတ်ကို ဖျောက်လိုက်မယ် */
+#load-more-toggle:checked ~ div .btn-load-more {
+    display: none;
+}
+
+/* Button Style (အရင်အတိုင်း Neon Glow) */
+.btn-load-more {
+    display: inline-block;
+    background: transparent;
+    color: #ffff00;
+    border: 2px solid #ffff00;
+    padding: 12px 40px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.4s;
+    border-radius: 4px;
+}
+
+.btn-load-more:hover {
+    box-shadow: 0 0 20px #ffff00;
+    background: #ffff00;
+    color: #000;
+}
+
+/* ပေါ်လာမည့် Animation */
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+/* Pure */
+/* Footer */
+.site-footer {
+  background: #000000;
+  padding: 40px 60px 20px;
+  font-family: system-ui, sans-serif;
+}
+
+.footer-top {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr 1fr auto;
+  gap: 40px;
+}
+
+.footer-col h4 {
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+
+.footer-col a {
+  display: block;
+  font-size: 13px;
+  color: #cccccc;
+  text-decoration: none;
+  margin-bottom: 10px;
+}
+
+.footer-col a:hover {
+  text-decoration: underline;
+}
+
+.brand .logo {
+  font-size: 28px;
+  font-weight: 900;
+}
+
+.brand p {
+  font-size: 13px;
+  color: #c2c2c2;
+  margin: 10px 0 20px;
+}
+
+.social a {
+  margin-right: 10px;
+  font-size: 18px;
+  color: #b1b1b1;
+}
+
+.payments img {
+  width: 40px;
+  margin-bottom: 10px;
+  display: block;
+}
+
+/* BOTTOM */
+.footer-bottom {
+  border-top: 1px solid #ddd;
+  margin-top: 30px;
+  padding-top: 16px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: #666;
+}
+
+.footer-bottom .links a {
+  margin-left: 16px;
+  text-decoration: none;
+  color: #666;
+}
+
+/* ===== FOOTER ENTRY ANIMATION ===== */
+.site-footer {
+  animation: footerFadeUp 0.8s ease forwards;
+}
+
+@keyframes footerFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animation */
+/* Feature */
+.featured-title {
+  font-family: 'Kanit', sans-serif;
+  /* ပိုပြီး ထူထဲတဲ့ Font */
+  font-weight: 900;
+  font-size: 3rem;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 30px;
+
+  /* စာသားကို ပုံထဲကလို နည်းနည်း စောင်းပေးမယ် */
+  display: inline-block;
+  transform: skew(-5deg);
+
+  /* စာသားကို ပိုပြီး ကြွတက်နေအောင် Shadow ထည့်မယ် */
+  text-shadow: 3px 3px 0px #ff0000;
+  /* အနီရောင် Shadow က JB Style နဲ့ လိုက်ဖက်ပါတယ် */
+
+  /* စာသား ပေါ်လာရင် သုံးမယ့် Animation */
+  animation: fadeInSlide 1s ease-out forwards;
+}
+
+/* စာသားလေး အောက်ကနေ အပေါ်ကို ပြေးတက်လာမယ့် Animation */
+@keyframes fadeInSlide {
+  0% {
+    opacity: 0;
+    transform: translateY(20px) skew(-5deg);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0) skew(-5deg);
+  }
+}
+
+/* စာသားပေါ် Mouse တင်ရင် အရောင်ပြောင်းမယ့် Effect */
+.featured-title:hover {
+  color: #ffff00;
+  /* အဝါရောင် ပြောင်းသွားမယ် */
+  text-shadow: 3px 3px 0px #ffffff;
+  transition: 0.3s;
+}
+
+.featured-section {
+  background-color: #000000;
+}
+
+.custom-card {
+  background: #ffffff;
+  padding: 15px;
+  border-radius: 20px;
+  /* Radius ကို နည်းနည်း ပိုကျွေးထားတယ် */
+  position: relative;
+  height: 100%;
+  border: none;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Mouse တင်လိုက်ရင် ကြွလာမယ့် Animation */
+.custom-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 10px 30px rgba(255, 255, 0, 0.2);
+  /* အဝါရောင်သန်းတဲ့ Shadow လေး */
+}
+
+.img-box img {
+  max-width: 100%;
+  height: auto;
+  transition: transform 0.5s ease;
+}
+
+.custom-card:hover .img-box img {
+  transform: scale(1.08);
+  /* ပုံလေး နည်းနည်း ပွလာမယ် */
+}
+
+/* Add to Cart Link Button with Animation */
+.btn-cart-link {
+  display: block;
+  background: #008a00;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  padding: 12px;
+  font-weight: bold;
+  border-radius: 8px;
+  margin-top: 10px;
+  transition: all 0.3s ease;
+}
+
+.btn-cart-link:hover {
+  background: #00b300;
+  color: white;
+  box-shadow: 0 4px 15px rgba(0, 138, 0, 0.4);
+  transform: scale(1.02);
+}
+
+/* Pricing Ticket */
+.ticket {
+  background: #ffff00;
+  border: 2px solid #000;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+/* "ON SALE" Badge ကို ပုံထဲကအတိုင်း ဖြစ်အောင် ပြင်ဆင်ခြင်း */
+.badge-sale {
+  background: #ff0000;
+  /* အနီရောင် */
+  color: white;
+  font-weight: 900;
+  font-size: 14px;
+  padding: 2px 12px;
+  border: 2px solid #000;
+  /* အနက်ရောင်ဘောင် */
+  position: absolute;
+  top: 15px;
+  left: 10px;
+  z-index: 10;
+  /* အနားစောင်းပေးဖို့ (Skew effect) */
+  transform: skew(-10deg);
+
+  /* စာသားက အရမ်းစောင်းမသွားအောင် ပြန်ထိန်းတာ */
+  display: inline-block;
+  font-family: 'Arial Black', sans-serif;
+  letter-spacing: 0.5px;
+  box-shadow: 2px 2px 0px #000;
+  /* အောက်က အနက်ရောင် Shadow လေးနည်းနည်းပါမယ် */
+}
+
+/* Card Hover လုပ်ရင် Badge လေးပါ လှုပ်သွားအောင် Animation ထည့်မယ် */
+.custom-card:hover .badge-sale {
+  animation: wiggle 0.5s ease-in-out;
+}
+
+@keyframes wiggle {
+  0% {
+    transform: skew(-10deg) scale(1);
+  }
+
+  50% {
+    transform: skew(-10deg) scale(1.1);
+  }
+
+  100% {
+    transform: skew(-10deg) scale(1);
+  }
+}
+
+.ticket-price {
+  font-size: 24px;
+  font-weight: 900;
+  color: #000;
+  text-align: center;
+}
+
+.ticket-off {
+  background: #000;
+  color: #fff;
+  font-size: 10px;
+  text-align: center;
+  padding: 2px;
+}
+
+/* Brand Name - ပုံထဲကလို ရှင်းလင်းပြတ်သားစေရန် */
+.brand {
+  font-family: 'Arial Black', Gadget, sans-serif;
+  font-size: 11px;
+  font-weight: 900;
+  color: #333;
+  letter-spacing: 0.5px;
+  margin-bottom: 2px;
+  text-transform: uppercase;
+  /* စာလုံးအကြီးဖြစ်စေရန် */
+}
+
+/* Product Name - ပိုလှပပြီး ဖတ်ရလွယ်ကူစေရန် */
+.product-name {
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: #000;
+  line-height: 1.3;
+  height: 40px;
+  /* စာသား ၂ ကြောင်းစာအတွက် အမြင့်သတ်မှတ်ချက် */
+  display: -webkit-box;
+  overflow: hidden;
+  margin-bottom: 8px;
+  transition: color 0.3s ease;
+}
+
+/* Mouse တင်လိုက်ရင် Product Name အရောင်လေး ပြောင်းသွားမယ့် Animation */
+.custom-card:hover .product-name {
+  color: #008a00;
+  /* Add to cart button အရောင်နဲ့ လိုက်ဖက်အောင် အစိမ်းရောင်ပြောင်းမယ် */
+}
+
+.rating {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  /* Star လေးတွေကြား အကွာအဝေး */
+}
+
+/* Star အရောင် အဝါရောင်ပြောင်းရန် */
+.rating i {
+  color: #ffc107;
+  font-size: 12px;
+}
+
+.review-count {
+  color: #666;
+  font-size: 11px;
+  margin-left: 5px;
+}
+
+/* Feature */
+/* =========================================
+   NIGHTDREAM FOOTER - FULLY SYNCED
+   ========================================= */
+
+.site-footer {
+  background-color: #000;
+  padding: 60px 0 30px;
+  border-top: 1px solid #ffff00; /* အဝါရောင်မျဉ်း */
+  box-shadow: 0 -5px 15px rgba(255, 255, 0, 0.2); /* Neon Glow */
+  animation: footerFadeUp 0.8s ease forwards;
+}
+
+.footer-top {
+  display: flex;
+  flex-wrap: wrap; 
+  gap: 30px;
+  justify-content: space-between;
+}
+
+.footer-col {
+  flex: 1; 
+  min-width: 200px; 
+  margin-bottom: 20px;
+}
+
+/* ခေါင်းစဉ် (Title) များ - Underline Animation ညှိထားခြင်း */
+.footer-col h5, .footer-col h4 {
+  position: relative;
+  color: #ffffff;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: inline-block;
+  margin-bottom: 25px;
+}
+
+.footer-col h5::after, .footer-col h4::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0;
+  height: 2px;
+  background: #f0f87f; /* Neon Yellow */
+  transition: width 0.3s ease;
+}
+
+.footer-col:hover h5::after, .footer-col:hover h4::after {
+  width: 40px; 
+}
+
+/* Link များ - အမည်းရောင်ဖြစ်သွားခြင်းကို ပြင်ဆင်ထားသည် */
+.footer-links a, .footer-col a {
+  color: #b0b0b0 !important; /* Default မီးခိုးရောင် */
+  text-decoration: none;
+  transition: transform 0.25s ease, color 0.25s ease;
+  display: block; /* တစ်ကြောင်းချင်းစီဖြစ်အောင် */
+  margin-bottom: 10px;
+}
+
+.footer-links a:hover, .footer-col a:hover {
+  transform: translateX(6px); /* ညာဘက်သို့ အနည်းငယ်ရွေ့မည် */
+  color: #f0f87f !important; /* အဝါရောင်ပြောင်းမည် (အမည်းရောင်မဟုတ်တော့ပါ) */
+  text-shadow: 0 0 8px rgba(255, 255, 0, 0.4);
+}
+
+/* Social Media Icons */
+/* Social Icons များကို တစ်တန်းတည်း စီရန် */
+.social {
+    display: flex !important; /* ဘေးတိုက်စီရန် အတင်းအကျပ်ခိုင်းခြင်း */
+    align-items: center;      /* အပေါ်အောက် အလယ်ညှိရန် */
+    gap: 12px;                /* Icon တစ်ခုနဲ့တစ်ခုကြား အကွာအဝေး */
+    flex-wrap: nowrap;        /* အောက်ကို ပြုတ်မကျသွားစေရန် */
+}
+
+.social a {
+    display: inline-flex !important; /* Icon လေးတွေကို box ထဲမှာ အလယ်ရောက်စေရန် */
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 50px; /* ဒီနေရာမှာ radius တိုး/လျှော့ လုပ်နိုင်ပါတယ် */
+    background-color: #333; /* နောက်ခံအရောင် */
+    margin: 0 !important;   /* မလိုလားအပ်တဲ့ margin တွေကြောင့် အောက်မကျစေရန် */
+    color: #fff;
+    transition: 0.3s ease;
+    text-decoration: none;
+}
+.social .fb { background: #1877f2; }
+.social .ig { background: radial-gradient(circle at 30% 30%, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5); }
+.social .yt { background: #ff0000; }
+.social .x  { background: #000000; border: 1px solid #333; }
+
+.social a:hover {
+  transform: translateY(-5px) scale(1.1);
+  box-shadow: 0 0 15px rgba(240, 248, 127, 0.4);
+}
+
+/* Payment Icons - ဆိုဒ်ညီအောင် ညှိထားခြင်း */
+.payments img {
+  width: 55px; 
+  height: 35px;
+  object-fit: contain;
+  background: #fff; 
+  padding: 4px;
+  border-radius: 6px;
+  margin: 0 8px 8px 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  opacity: 0.9;
+}
+
+.payments img:hover {
+  transform: scale(1.15);
+  opacity: 1;
+}
+.brand-desc {
+  color: #b0b0b0; /* အဖြူရောင်ထက် နည်းနည်းမှိန်သောအရောင် */
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin-top: 15px;
+  max-width: 280px; /* စာသားတွေကို တစ်တန်းတည်း အရှည်ကြီးမဖြစ်အောင် */
+}
+/* Footer Animation */
+@keyframes footerFadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Mobile Fix */
+@media (max-width: 768px) {
+  .footer-top { text-align: center; justify-content: center; }
+  .footer-col h5::after, .footer-col h4::after { left: 50%; transform: translateX(-50%); }
+  .payments { display: flex; justify-content: center; flex-wrap: wrap; }
+}
+/* Footer */
+/* Card Setup */
+.card-anchor {
+    text-decoration: none !important;
+    display: block;
+}
+
+.full-review-card {
+    display: flex;
+    background: #0a0a0a;
+    border: 1px solid #1a1a1a;
+    border-radius: 24px;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.5s cubic-bezier(0.2, 1, 0.3, 1);
+}
+
+/* Image on Front (Left Side) */
+.card-image-part {
+    flex: 0.9;
+    background: #000;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.neon-portal-bg {
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    background: radial-gradient(circle, rgba(255, 255, 0, 0.2) 0%, transparent 70%);
+    animation: rotateGlow 6s linear infinite;
+}
+
+.main-phone-img {
+    width: 75%;
+    z-index: 2;
+    transition: 0.6s ease;
+}
+
+/* Text Info Side (Right Side) */
+.card-info-part {
+    flex: 1.1;
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(90deg, #000 0%, #0a0a0a 100%);
+}
+
+.score-badge {
+    background: #ffff00;
+    color: #000;
+    font-weight: 900;
+    padding: 4px 12px;
+    border-radius: 6px;
+    box-shadow: 0 0 15px #ffff00;
+    margin-right: 10px;
+}
+
+.phone-title {
+    color: #fff;
+    font-weight: 800;
+    font-size: 1.8rem;
+    margin: 15px 0 10px;
+    transition: 0.3s;
+}
+
+.phone-summary {
+    color: #888;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* Icons Animation */
+.mini-icon-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #444;
+    transition: 0.4s;
+}
+
+.mini-icon-box i {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+
+.mini-icon-box span {
+    font-size: 9px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* --- HOVER ANIMATIONS --- */
+
+.full-review-card:hover {
+    transform: scale(1.02);
+    border-color: #ffff00;
+    box-shadow: 0 0 50px rgba(255, 255, 0, 0.15);
+}
+
+.full-review-card:hover .main-phone-img {
+    transform: scale(1.15) rotate(-5deg);
+    filter: drop-shadow(0 0 20px #ffff00);
+}
+
+.full-review-card:hover .phone-title {
+    color: #ffff00;
+    transform: translateX(10px);
+}
+
+.full-review-card:hover .mini-icon-box {
+    color: #ffff00;
+    animation: iconJump 0.6s ease infinite alternate;
+}
+
+@keyframes rotateGlow {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes iconJump {
+    from { transform: translateY(0); }
+    to { transform: translateY(-8px); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .full-review-card { flex-direction: column; height: auto; }
+    .card-image-part { padding: 40px 0; }
+}
+/* H2 */
+.static-expert-header {
+    position: relative;
+    padding: 40px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* ၁။ အနောက်က နောက်ခံစာသား (အကြီးကြီးနဲ့ ဝါးနေမယ်) */
+.bg-glow-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 8rem;
+    font-weight: 900;
+    color: rgba(255, 255, 0, 0.03); /* အလွန်မှိန်တဲ့ အဝါရောင် */
+    letter-spacing: 20px;
+    z-index: 1;
+    user-select: none;
+    margin: 0;
+}
+
+/* ၂။ အဓိက Title (Modern & Clean) */
+.main-static-title {
+    font-size: 3.5rem;
+    font-weight: 900;
+    color: #fff;
+    letter-spacing: 5px;
+    position: relative;
+    z-index: 2;
+    margin: 0;
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+}
+
+.thin-text {
+    font-weight: 200; /* Expert ဆိုတဲ့စာလုံးကို ပါးပါးလေးထားမယ် */
+    color: #ffff00;
+    text-shadow: 0 0 10px rgba(255, 255, 0, 0.3);
+}
+
+/* ၃။ အောက်က အလှဆင် Separator */
+.title-separator {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 15px;
+    z-index: 2;
+}
+
+.line {
+    width: 80px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #ffff00, transparent);
+    box-shadow: 0 0 10px #ffff00;
+}
+
+.dot {
+    width: 6px;
+    height: 6px;
+    background: #ffff00;
+    border-radius: 50%;
+    box-shadow: 0 0 8px #ffff00;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .main-static-title { font-size: 2.2rem; }
+    .bg-glow-text { font-size: 4rem; letter-spacing: 10px; }
+}
+/*  */
+/* Card Setup */
+.card-anchor {
+    text-decoration: none !important;
+    display: block;
+}
+
+.full-review-card {
+    display: flex;
+    background: #0a0a0a;
+    border: 1px solid #1a1a1a;
+    border-radius: 24px;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.5s cubic-bezier(0.2, 1, 0.3, 1);
+}
+
+/* Image on Front (Left Side) */
+.card-image-part {
+    flex: 0.9;
+    background: #000;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.neon-portal-bg {
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    background: radial-gradient(circle, rgba(255, 255, 0, 0.2) 0%, transparent 70%);
+    animation: rotateGlow 6s linear infinite;
+}
+
+.main-phone-img {
+    width: 75%;
+    z-index: 2;
+    transition: 0.6s ease;
+}
+
+/* Text Info Side (Right Side) */
+.card-info-part {
+    flex: 1.1;
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(90deg, #000 0%, #0a0a0a 100%);
+}
+
+.score-badge {
+    background: #ffff00;
+    color: #000;
+    font-weight: 900;
+    padding: 4px 12px;
+    border-radius: 6px;
+    box-shadow: 0 0 15px #ffff00;
+    margin-right: 10px;
+}
+
+.phone-title {
+    color: #fff;
+    font-weight: 800;
+    font-size: 1.8rem;
+    margin: 15px 0 10px;
+    transition: 0.3s;
+}
+
+.phone-summary {
+    color: #888;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* Icons Animation */
+.mini-icon-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #444;
+    transition: 0.4s;
+}
+
+.mini-icon-box i {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+
+.mini-icon-box span {
+    font-size: 9px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* --- HOVER ANIMATIONS --- */
+
+.full-review-card:hover {
+    transform: scale(1.02);
+    border-color: #ffff00;
+    box-shadow: 0 0 50px rgba(255, 255, 0, 0.15);
+}
+
+.full-review-card:hover .main-phone-img {
+    transform: scale(1.15) rotate(-5deg);
+    filter: drop-shadow(0 0 20px #ffff00);
+}
+
+.full-review-card:hover .phone-title {
+    color: #ffff00;
+    transform: translateX(10px);
+}
+
+.full-review-card:hover .mini-icon-box {
+    color: #ffff00;
+    animation: iconJump 0.6s ease infinite alternate;
+}
+
+@keyframes rotateGlow {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes iconJump {
+    from { transform: translateY(0); }
+    to { transform: translateY(-8px); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .full-review-card { flex-direction: column; height: auto; }
+    .card-image-part { padding: 40px 0; }
+}
+/* Heading */
+.reviews-header-container {
+    position: relative;
+    padding: 60px 0;
+    overflow: hidden;
+}
+
+/* ၁။ Title အနောက်က ဝါးနေတဲ့ Neon Orb */
+.header-glow-orb {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 100px;
+    background: radial-gradient(circle, rgba(255, 255, 0, 0.08) 0%, transparent 70%);
+    filter: blur(20px);
+    z-index: 1;
+}
+
+/* ၂။ Main Title Styling */
+.reviews-title-wrapper {
+    position: relative;
+    display: inline-block;
+    z-index: 2;
+}
+
+.minimal-reviews-title {
+    font-size: 5rem;
+    font-weight: 900;
+    color: #fff;
+    letter-spacing: 25px; /* စာလုံးတွေကို ကျဲကျဲလေးထားမယ် */
+    margin: 0;
+    padding: 0 20px;
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+}
+
+/* ၃။ အပေါ်နဲ့ အောက်က Neon လိုင်းလေးများ */
+.title-top-line, .title-bottom-line {
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: #ffff00;
+    margin: 0 auto;
+    box-shadow: 0 0 15px #ffff00;
+}
+
+.title-top-line { margin-bottom: 15px; }
+.title-bottom-line { margin-top: 15px; }
+
+/* ၄။ Subtitle Styling */
+.header-subtitle {
+    color: #ffff00;
+    font-size: 10px;
+    letter-spacing: 12px;
+    margin-top: 25px;
+    font-weight: 700;
+    opacity: 0.6;
+    text-transform: uppercase;
+    z-index: 2;
+    position: relative;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .minimal-reviews-title { 
+        font-size: 2.5rem; 
+        letter-spacing: 12px; 
+    }
+    .header-subtitle { 
+        font-size: 8px; 
+        letter-spacing: 6px; 
+    }
+}
+/* icons */
+.category-tag {
+    background: transparent;
+    color: #ffff00; /* Neon Yellow */
+    border: 1px solid #ffff00;
+    font-weight: 800;
+    padding: 2px 10px;
+    border-radius: 4px;
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    box-shadow: 0 0 5px rgba(255, 255, 0, 0.2);
+    transition: 0.3s ease;
+}
+
+/* Card ကို hover လုပ်တဲ့အခါ Badge လေးပါ လင်းလာစေဖို့ */
+.full-review-card:hover .category-tag {
+    background: #ffff00;
+    color: #000;
+    box-shadow: 0 0 15px #ffff00;
+}
+/* News Slide */
+/* 1 */
+/* Card တစ်ခုလုံးကို Neon Glow ဖြစ်အောင်လုပ်ခြင်း */
+.news-card-neon {
+    background: #0a0a0a;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 0, 0.1);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Smooth motion */
+    height: 100%;
+}
+
+/* Image Hover Animation */
+.news-img-box {
+    overflow: hidden;
+    position: relative;
+}
+
+.news-img-box img {
+    transition: transform 0.6s ease;
+    object-fit: cover;
+}
+
+/* Card ကို Mouse တင်ရင် ဖြစ်မယ့်အပြောင်းအလဲ */
+.news-card-neon:hover {
+    transform: translateY(-12px); /* အပေါ်ကို ကြွတက်မယ် */
+    border-color: #ffff00; /* အဝါရောင်ဘောင် လင်းလာမယ် */
+    box-shadow: 0 10px 30px rgba(255, 255, 0, 0.2); /* အောက်ကနေ အလင်းဖြာထွက်မယ် */
+}
+
+.news-card-neon:hover .news-img-box img {
+    transform: scale(1.1); /* ပုံက Zoom ဖြစ်လာမယ် */
+}
+
+/* Title အရောင်ကို အဝါရောင်ပြောင်းခြင်း */
+.news-card-neon h5 {
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+.news-card-neon:hover h5 {
+    color: #ffff00; /* Hover လုပ်ရင် ခေါင်းစဉ်က ဝါသွားမယ် */
+}
+
+/* Read More Link Animation */
+.read-more-link {
+    color: #ffff00;
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    display: inline-block;
+    position: relative;
+    transition: 0.3s;
+}
+
+.read-more-link i {
+    transition: transform 0.3s ease;
+    display: inline-block;
+}
+
+.read-more-link:hover i {
+    transform: translateX(8px); /* မြှားလေး ညာဘက်ကို တိုးသွားမယ် */
+}
+/* 2 */
+/* HOVER EFFECT */
+.product-card {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.25);
+}
+
+/* IMAGE ZOOM */
+.card-right img {
+  transition: transform 0.5s ease;
+}
+
+.product-card:hover .card-right img {
+  transform: scale(1.08);
+}
+
+/* icons */
+.meta-link {
+  color: #aaa;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.meta-link i {
+  font-size: 13px;
+  color: #888;
+}
+
+.meta-link:hover {
+  color: #fff;
+}
+
+.meta-link:hover i {
+  color: #ffc107;
+  /* accent */
+}
+
+/* Date */
+.meta-date i {
+  font-size: 13px;
+  color: #000000;
+}
+
+/* h2-link */
+.h2-link {
+  color: #000;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.h2-link:hover {
+  color: #5d6918;
+  /* accent */
+}
+
+/* See More */
+.see-more-wrap {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.see-more-link {
+  color: #c6ff00;
+  font-size: 14px;
+  text-decoration: none;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: 0.3s ease;
+}
+
+.see-more-wrap {
+  display: flex;
+  justify-content: flex-start;
+  /* left */
+  margin-top: 20px;
+}
+
+.see-more-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+
+  padding: 8px 18px;
+  border-radius: 20px;
+
+  border: 1px solid #c6ff00;
+  color: #c6ff00;
+  text-decoration: none;
+
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+.see-more-btn:hover {
+  background: #c6ff00;
+  color: #000;
+  gap: 10px;
+}
+
+@media (max-width: 600px) {
+  .see-more-wrap {
+    justify-content: center;
+  }
+}
+/* 3 */
+/* Card ကို ဘေးတိုက် ၂ ခြမ်းခွဲခြင်း */
+.news-card-neon {
+    display: flex; /* ဘေးတိုက်ဖြစ်စေရန် */
+    align-items: center;
+    background: #000;
+    border: 1px solid #ffff00; /* Neon Yellow Border */
+    border-radius: 20px;
+    overflow: hidden;
+    height: 280px;
+    transition: 0.4s ease;
+}
+
+/* iPhone စာသားကို အဝါရောင်ပြောင်းခြင်း */
+.iphone-highlight {
+    color: #ffff00 !important;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+/* စာသားအပိုင်း အချိုးအစား */
+.news-body {
+    flex: 1.2;
+    z-index: 2;
+}
+
+/* ပုံအပိုင်း အချိုးအစားနှင့် စောင်းထားခြင်း */
+.news-img-box {
+    flex: 0.8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.tilted-img {
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* --- HOVER ANIMATION --- */
+
+.news-card-neon:hover {
+    box-shadow: 0 0 25px rgba(255, 255, 0, 0.2);
+    transform: translateY(-5px);
+}
+
+/* Mouse တင်ရင် ပုံပြန်တည့်သွားပြီး Zoom ဖြစ်မည့် Animation */
+.news-card-neon:hover .tilted-img {
+    transform: rotate(0deg) scale(1.1) translateX(0);
+    filter: drop-shadow(0 0 20px #ffff00);
+}
+
+.read-more-link {
+    color: #ffff00;
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+/* News */
+.news-section {
+  padding: 20px;
+  background: #000000;
+}
+
+/* SCROLL ROW */
+.horizontal-scroll {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  padding-bottom: 10px;
+  scroll-snap-type: x mandatory;
+}
+
+/* hide ugly scrollbar (optional) */
+.horizontal-scroll::-webkit-scrollbar {
+  height: 6px;
+}
+
+.horizontal-scroll::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 10px;
+}
+/* CARD */
+.news-card-row {
+  min-width: 340px;
+  background: #e9edf5;
+  border-radius: 16px;
+  padding: 14px;
+  display: flex;
+  gap: 12px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.news-card-row:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+/* IMAGE */
+.news-card-row img {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* TEXT */
+.news-text h5 {
+  font-size: 15px;
+  color: #111;
+  margin-bottom: 6px;
+}
+
+.news-text p {
+  font-size: 13px;
+  color: #444;
+  margin-bottom: 10px;
+}
+
+/* BUTTON */
+.card-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+
+  padding: 6px 14px;
+  border-radius: 999px;
+
+  background: transparent;
+  border: 1px solid #1a73e8;
+  color: #1a73e8;
+
+  font-size: 12px;
+  font-weight: 500;
+  text-decoration: none;
+
+  transition: 0.3s ease;
+}
+
+.card-btn:hover {
+  background: #1a73e8;
+  color: #fff;
+}
+/* Button */
+.see-more-wrap {
+  margin-top: 20px;
+  display: flex;
+  justify-content: flex-end;
+  /* left */
+}
+
+.see-more-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 10px 22px;
+  border-radius: 999px;
+
+  background: transparent;
+  border: 1px solid #c6ff00;
+  color: #c6ff00;
+
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+.see-more-btn i {
+  transition: transform 0.3s ease;
+}
+
+.see-more-btn:hover {
+  background: #c6ff00;
+  color: #000;
+}
+
+.see-more-btn:hover i {
+  transform: translateX(4px);
+}
+/* 5. Pagination Float Animation */
+/* နောက်ခံ တစ်ခုလုံးကို အမည်းရောင်ထားခြင်း */
+.pagination-section {
+    background-color: #000000;
+    padding: 50px 0;
+    width: 100%;
+}
+
+.jb-pagination {
+    display: flex;
+    list-style: none;
+    gap: 15px;
+    padding: 0;
+}
+
+/* Link ခလုတ်များ၏ အခြေခံ Style */
+.page-btn {
+    width: 50px;
+    height: 50px;
+    background: #1a1a1a; /* Dark gray */
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none; /* Link မျဉ်းတားဖျောက်ခြင်း */
+    border-radius: 10px;
+    font-weight: 800;
+    font-size: 1.1rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid #333;
+}
+
+/* Mouse တင်လျှင်ဖြစ်စေ၊ Active ဖြစ်လျှင်ဖြစ်စေ Glow ဖြစ်မည့်ပုံစံ */
+.page-btn:hover, 
+.page-btn.active {
+    background: #ffff00; /* Yellow */
+    color: #000000 !important;
+    transform: translateY(-8px) scale(1.1);
+    /* Neon Glow Effect (ပုံထဲကအတိုင်း) */
+    box-shadow: 0 0 20px rgba(255, 255, 0, 0.8), 
+                0 0 40px rgba(255, 255, 0, 0.3);
+    border-color: #ffff00;
+}
+
+/* ခလုတ်ကို နှိပ်လိုက်တဲ့ ခဏမှာ ဖြစ်မည့် Animation (Click Effect) */
+.page-btn:active {
+    transform: translateY(-2px) scale(0.95);
+    box-shadow: 0 0 10px rgba(255, 255, 0, 0.5);
+}
+/* News Slide */
+
+/* Reviews */
+/* 5. Pagination Float Animation */
+/* နောက်ခံ တစ်ခုလုံးကို အမည်းရောင်ထားခြင်း */
+.pagination-section {
+    background-color: #000000;
+    padding: 50px 0;
+    width: 100%;
+}
+
+.jb-pagination {
+    display: flex;
+    list-style: none;
+    gap: 15px;
+    padding: 0;
+}
+
+/* Link ခလုတ်များ၏ အခြေခံ Style */
+.page-btn {
+    width: 50px;
+    height: 50px;
+    background: #1a1a1a; /* Dark gray */
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none; /* Link မျဉ်းတားဖျောက်ခြင်း */
+    border-radius: 10px;
+    font-weight: 800;
+    font-size: 1.1rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid #333;
+}
+
+/* Mouse တင်လျှင်ဖြစ်စေ၊ Active ဖြစ်လျှင်ဖြစ်စေ Glow ဖြစ်မည့်ပုံစံ */
+.page-btn:hover, 
+.page-btn.active {
+    background: #ffff00; /* Yellow */
+    color: #000000 !important;
+    transform: translateY(-8px) scale(1.1);
+    /* Neon Glow Effect (ပုံထဲကအတိုင်း) */
+    box-shadow: 0 0 20px rgba(255, 255, 0, 0.8), 
+                0 0 40px rgba(255, 255, 0, 0.3);
+    border-color: #ffff00;
+}
+
+/* ခလုတ်ကို နှိပ်လိုက်တဲ့ ခဏမှာ ဖြစ်မည့် Animation (Click Effect) */
+.page-btn:active {
+    transform: translateY(-2px) scale(0.95);
+    box-shadow: 0 0 10px rgba(255, 255, 0, 0.5);
+}
+/* Reviews */
+/* News Hero Section အသစ် */
+.news-hero-modern {
+    position: relative;
+    height: 450px;
+    width: 100%;
+    background: #000; /* အခြေခံအမည်းရောင် */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+/* ၁။ နောက်ခံအရောင်ကို Gradient နဲ့ Animation ပေးခြင်း */
+.hero-bg-animate {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 50% 50%, #1a1a00 0%, #000 70%);
+    z-index: 1;
+}
+
+/* ၂။ Tech Grid Overlay (မျဉ်းကြားလေးများ) */
+.hero-grid-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(rgba(255, 255, 0, 0.05) 1px, transparent 1px),
+                      linear-gradient(90deg, rgba(255, 255, 0, 0.05) 1px, transparent 1px);
+    background-size: 40px 40px; /* Grid အကွက်ဆိုဒ် */
+    z-index: 2;
+    mask-image: radial-gradient(ellipse at center, black, transparent 80%);
+}
+
+/* ၃။ စာသားများနှင့် Neon Effect */
+.hero-text {
+    position: relative;
+    z-index: 3;
+    text-align: center;
+}
+
+.top-badge {
+    color: #ffff00;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 12px;
+    border: 1px solid #ffff00;
+    padding: 5px 15px;
+    border-radius: 50px;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+.neon-title {
+    font-size: 6rem;
+    font-weight: 900;
+    color: #ffff00;
+    text-transform: uppercase;
+    letter-spacing: 15px;
+    margin: 10px 0;
+    /* Neon Glow */
+    text-shadow: 0 0 10px rgba(255, 255, 0, 0.8),
+                 0 0 30px rgba(255, 255, 0, 0.4);
+    animation: pulseGlow 3s infinite ease-in-out;
+}
+
+.hero-subtitle {
+    color: #b0b0b0;
+    letter-spacing: 2px;
+    font-size: 1.1rem;
+    margin-top: 10px;
+}
+
+.news-line {
+    width: 120px;
+    height: 3px;
+    background: #ffff00;
+    margin: 0 auto;
+    box-shadow: 0 0 15px #ffff00;
+}
+
+/* ၄။ စာလုံးကို တုန်ခါနေသလို Glow ဖြစ်စေမယ့် Animation */
+@keyframes pulseGlow {
+    0%, 100% { text-shadow: 0 0 10px rgba(255, 255, 0, 0.8); opacity: 1; }
+    50% { text-shadow: 0 0 30px rgba(255, 255, 0, 1); opacity: 0.9; }
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .neon-title { font-size: 3.5rem; letter-spacing: 8px; }
+    .news-hero-modern { height: 350px; }
+}
+/* Card Setup */
+.card-anchor {
+    text-decoration: none !important;
+    display: block;
+}
+
+.full-review-card {
+    display: flex;
+    background: #0a0a0a;
+    border: 1px solid #1a1a1a;
+    border-radius: 24px;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.5s cubic-bezier(0.2, 1, 0.3, 1);
+}
+
+/* Image on Front (Left Side) */
+.card-image-part {
+    flex: 0.9;
+    background: #000;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.neon-portal-bg {
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    background: radial-gradient(circle, rgba(255, 255, 0, 0.2) 0%, transparent 70%);
+    animation: rotateGlow 6s linear infinite;
+}
+
+.main-phone-img {
+    width: 75%;
+    z-index: 2;
+    transition: 0.6s ease;
+}
+
+/* Text Info Side (Right Side) */
+.card-info-part {
+    flex: 1.1;
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(90deg, #000 0%, #0a0a0a 100%);
+}
+
+.score-badge {
+    background: #ffff00;
+    color: #000;
+    font-weight: 900;
+    padding: 4px 12px;
+    border-radius: 6px;
+    box-shadow: 0 0 15px #ffff00;
+    margin-right: 10px;
+}
+
+.phone-title {
+    color: #fff;
+    font-weight: 800;
+    font-size: 1.8rem;
+    margin: 15px 0 10px;
+    transition: 0.3s;
+}
+
+.phone-summary {
+    color: #888;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* Icons Animation */
+.mini-icon-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #444;
+    transition: 0.4s;
+}
+
+.mini-icon-box i {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+
+.mini-icon-box span {
+    font-size: 9px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* --- HOVER ANIMATIONS --- */
+
+.full-review-card:hover {
+    transform: scale(1.02);
+    border-color: #ffff00;
+    box-shadow: 0 0 50px rgba(255, 255, 0, 0.15);
+}
+
+.full-review-card:hover .main-phone-img {
+    transform: scale(1.15) rotate(-5deg);
+    filter: drop-shadow(0 0 20px #ffff00);
+}
+
+.full-review-card:hover .phone-title {
+    color: #ffff00;
+    transform: translateX(10px);
+}
+
+.full-review-card:hover .mini-icon-box {
+    color: #ffff00;
+    animation: iconJump 0.6s ease infinite alternate;
+}
+
+@keyframes rotateGlow {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes iconJump {
+    from { transform: translateY(0); }
+    to { transform: translateY(-8px); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .full-review-card { flex-direction: column; height: auto; }
+    .card-image-part { padding: 40px 0; }
+}
+/* H2 */
+.static-expert-header {
+    position: relative;
+    padding: 40px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* ၁။ အနောက်က နောက်ခံစာသား (အကြီးကြီးနဲ့ ဝါးနေမယ်) */
+.bg-glow-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 8rem;
+    font-weight: 900;
+    color: rgba(255, 255, 0, 0.03); /* အလွန်မှိန်တဲ့ အဝါရောင် */
+    letter-spacing: 20px;
+    z-index: 1;
+    user-select: none;
+    margin: 0;
+}
+
+/* ၂။ အဓိက Title (Modern & Clean) */
+.main-static-title {
+    font-size: 3.5rem;
+    font-weight: 900;
+    color: #fff;
+    letter-spacing: 5px;
+    position: relative;
+    z-index: 2;
+    margin: 0;
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+}
+
+.thin-text {
+    font-weight: 200; /* Expert ဆိုတဲ့စာလုံးကို ပါးပါးလေးထားမယ် */
+    color: #ffff00;
+    text-shadow: 0 0 10px rgba(255, 255, 0, 0.3);
+}
+
+/* ၃။ အောက်က အလှဆင် Separator */
+.title-separator {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 15px;
+    z-index: 2;
+}
+
+.line {
+    width: 80px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #ffff00, transparent);
+    box-shadow: 0 0 10px #ffff00;
+}
+
+.dot {
+    width: 6px;
+    height: 6px;
+    background: #ffff00;
+    border-radius: 50%;
+    box-shadow: 0 0 8px #ffff00;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .main-static-title { font-size: 2.2rem; }
+    .bg-glow-text { font-size: 4rem; letter-spacing: 10px; }
+}
+/*  */
+/* Card Setup */
+.card-anchor {
+    text-decoration: none !important;
+    display: block;
+}
+
+.full-review-card {
+    display: flex;
+    background: #0a0a0a;
+    border: 1px solid #1a1a1a;
+    border-radius: 24px;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.5s cubic-bezier(0.2, 1, 0.3, 1);
+}
+
+/* Image on Front (Left Side) */
+.card-image-part {
+    flex: 0.9;
+    background: #000;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.neon-portal-bg {
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    background: radial-gradient(circle, rgba(255, 255, 0, 0.2) 0%, transparent 70%);
+    animation: rotateGlow 6s linear infinite;
+}
+
+.main-phone-img {
+    width: 75%;
+    z-index: 2;
+    transition: 0.6s ease;
+}
+
+/* Text Info Side (Right Side) */
+.card-info-part {
+    flex: 1.1;
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(90deg, #000 0%, #0a0a0a 100%);
+}
+
+.score-badge {
+    background: #ffff00;
+    color: #000;
+    font-weight: 900;
+    padding: 4px 12px;
+    border-radius: 6px;
+    box-shadow: 0 0 15px #ffff00;
+    margin-right: 10px;
+}
+
+.phone-title {
+    color: #fff;
+    font-weight: 800;
+    font-size: 1.8rem;
+    margin: 15px 0 10px;
+    transition: 0.3s;
+}
+
+.phone-summary {
+    color: #888;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* Icons Animation */
+.mini-icon-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #444;
+    transition: 0.4s;
+}
+
+.mini-icon-box i {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+
+.mini-icon-box span {
+    font-size: 9px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* --- HOVER ANIMATIONS --- */
+
+.full-review-card:hover {
+    transform: scale(1.02);
+    border-color: #ffff00;
+    box-shadow: 0 0 50px rgba(255, 255, 0, 0.15);
+}
+
+.full-review-card:hover .main-phone-img {
+    transform: scale(1.15) rotate(-5deg);
+    filter: drop-shadow(0 0 20px #ffff00);
+}
+
+.full-review-card:hover .phone-title {
+    color: #ffff00;
+    transform: translateX(10px);
+}
+
+.full-review-card:hover .mini-icon-box {
+    color: #ffff00;
+    animation: iconJump 0.6s ease infinite alternate;
+}
+
+@keyframes rotateGlow {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes iconJump {
+    from { transform: translateY(0); }
+    to { transform: translateY(-8px); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .full-review-card { flex-direction: column; height: auto; }
+    .card-image-part { padding: 40px 0; }
+}
+/* Heading */
+.reviews-header-container {
+    position: relative;
+    padding: 60px 0;
+    overflow: hidden;
+}
+
+/* ၁။ Title အနောက်က ဝါးနေတဲ့ Neon Orb */
+.header-glow-orb {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 100px;
+    background: radial-gradient(circle, rgba(255, 255, 0, 0.08) 0%, transparent 70%);
+    filter: blur(20px);
+    z-index: 1;
+}
+
+/* ၂။ Main Title Styling */
+.reviews-title-wrapper {
+    position: relative;
+    display: inline-block;
+    z-index: 2;
+}
+
+.minimal-reviews-title {
+    font-size: 5rem;
+    font-weight: 900;
+    color: #fff;
+    letter-spacing: 25px; /* စာလုံးတွေကို ကျဲကျဲလေးထားမယ် */
+    margin: 0;
+    padding: 0 20px;
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+}
+
+/* ၃။ အပေါ်နဲ့ အောက်က Neon လိုင်းလေးများ */
+.title-top-line, .title-bottom-line {
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: #ffff00;
+    margin: 0 auto;
+    box-shadow: 0 0 15px #ffff00;
+}
+
+.title-top-line { margin-bottom: 15px; }
+.title-bottom-line { margin-top: 15px; }
+
+/* ၄။ Subtitle Styling */
+.header-subtitle {
+    color: #ffff00;
+    font-size: 10px;
+    letter-spacing: 12px;
+    margin-top: 25px;
+    font-weight: 700;
+    opacity: 0.6;
+    text-transform: uppercase;
+    z-index: 2;
+    position: relative;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .minimal-reviews-title { 
+        font-size: 2.5rem; 
+        letter-spacing: 12px; 
+    }
+    .header-subtitle { 
+        font-size: 8px; 
+        letter-spacing: 6px; 
+    }
+}
+/* icons */
+.category-tag {
+    background: transparent;
+    color: #ffff00; /* Neon Yellow */
+    border: 1px solid #ffff00;
+    font-weight: 800;
+    padding: 2px 10px;
+    border-radius: 4px;
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    box-shadow: 0 0 5px rgba(255, 255, 0, 0.2);
+    transition: 0.3s ease;
+}
+
+/* Card ကို hover လုပ်တဲ့အခါ Badge လေးပါ လင်းလာစေဖို့ */
+.full-review-card:hover .category-tag {
+    background: #ffff00;
+    color: #000;
+    box-shadow: 0 0 15px #ffff00;
+}
+/* Input Box Animation */
+.jb-input {
+    width: 100%;
+    background: #111;
+    border: 1px solid #333;
+    color: white;
+    padding: 12px 15px;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+
+.jb-input:focus {
+    outline: none;
+    border-color: #ffff00;
+    box-shadow: 0 0 15px rgba(255, 255, 0, 0.3);
+    transform: translateY(-2px);
+}
+
+/* Delivery Card Selection */
+.delivery-card {
+    display: flex;
+    padding: 15px;
+    border: 1px solid #333;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.delivery-card:has(input:checked) {
+    background: #ffff00; /* */
+    color: black;
+    border-color: #ffff00;
+    box-shadow: 0 0 20px rgba(255, 255, 0, 0.4);
+}
+
+.delivery-card input { display: none; }
+
+/* Section Title Animation */
+.section-title {
+    font-weight: 800;
+    margin-bottom: 20px;
+    border-left: 4px solid #ffff00;
+    padding-left: 15px;
+}
+
+/* Continue Button */
+.btn-continue {
+    width: 100%;
+    background: #008a00;
+    color: white;
+    border: none;
+    padding: 15px;
+    font-weight: 900;
+    transition: 0.4s;
+    clip-path: polygon(0 0, 100% 0, 95% 100%, 0% 100%);
+}
+
+.btn-continue:hover {
+    background: #ffff00;
+    color: #000;
+    box-shadow: 0 0 30px #ffff00;
+    transform: scale(1.02);
+}
+/* card */
+/* Card Container Animation */
+.order-summary-card {
+    background: #0a0a0a;
+    border: 1px solid #222;
+    padding: 30px;
+    border-radius: 8px;
+    transition: 0.4s ease;
+}
+
+.order-summary-card:hover {
+    border-color: #ffff00;
+    box-shadow: 0 0 25px rgba(255, 255, 0, 0.1);
+}
+
+/* Thumbnail Badge Animation */
+.thumb-wrapper {
+    position: relative;
+    background: #fff;
+    border-radius: 8px;
+    padding: 5px;
+    width: 65px;
+    height: 65px;
+}
+
+.thumb-wrapper img { width: 100%; height: 100%; object-fit: contain; }
+
+.item-badge {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background: #555;
+    color: #fff;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    font-size: 11px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 8px rgba(0,0,0,0.5);
+}
+
+/* Input Neon Focus */
+.jb-input-neon {
+    width: 100%;
+    background: #111;
+    border: 1px solid #333;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.jb-input-neon:focus {
+    outline: none;
+    border-color: #ffff00;
+    box-shadow: 0 0 15px rgba(255, 255, 0, 0.4);
+    transform: scale(1.02);
+}
+
+/* Apply Button Neon Effect */
+.btn-neon-apply {
+    background: #000;
+    color: #fff;
+    border: 1px solid #444;
+    padding: 10px 18px;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+
+.btn-neon-apply:hover {
+    background: #ffff00;
+    color: #000;
+    border-color: #ffff00;
+    box-shadow: 0 0 15px #ffff00;
+}
+
+/* Total Amount Neon Pulse */
+.total-amt {
+    color: #fff;
+    animation: glowText 2s infinite alternate;
+}
+
+@keyframes glowText {
+    from { text-shadow: 0 0 5px rgba(255,255,255,0.2); }
+    to { text-shadow: 0 0 15px rgba(255,255,0,0.4); }
+}
+
+.total-display {
+    border-top: 1px solid #333;
+}
+/* Global Setup */
+body { font-family: sans-serif; }
+
+/* Image Gallery System */
+.product-gallery {
+    display: flex;
+    gap: 15px;
+}
+
+.thumbnails {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 80px;
+}
+
+.thumb-box {
+    cursor: pointer;
+    border: 2px solid #333;
+    border-radius: 4px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.thumb-box input { display: none; }
+
+.thumb-box:has(input:checked) {
+    border-color: #ffff00; /* */
+    box-shadow: 0 0 10px #ffff00;
+}
+
+.main-view {
+    flex-grow: 1;
+    background: #111;
+    height: 500px;
+    position: relative;
+    overflow: hidden;
+}
+
+.img-container .main-img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    opacity: 0;
+    transition: 0.5s ease-in-out;
+    transform: scale(0.95);
+}
+
+/* Image Switching Logic (Pure CSS) */
+.product-gallery:has(.thumb-box:nth-child(1) input:checked) .img1 { opacity: 1; transform: scale(1); }
+.product-gallery:has(.thumb-box:nth-child(2) input:checked) .img2 { opacity: 1; transform: scale(1); }
+.product-gallery:has(.thumb-box:nth-child(3) input:checked) .img3 { opacity: 1; transform: scale(1); }
+
+/* Color Circle Selection */
+.color-circle {
+    width: 45px;
+    height: 45px;
+    border-radius: 4px;
+    border: 2px solid #333;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.color-circle.silver { background: silver; }
+.color-circle.orange { background: #d35400; }
+.color-circle.yellow { background: #ffff00; }
+
+.color-circle.active, .color-circle:hover {
+    border-color: #ffff00;
+    box-shadow: 0 0 15px #ffff00; /* */
+}
+
+/* Storage Box Selection */
+.storage-box {
+    border: 1px solid #333;
+    padding: 10px 25px;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.storage-box.active {
+    background: #ffff00;
+    color: #000;
+    font-weight: bold;
+    box-shadow: 0 0 15px #ffff00; /* */
+}
+
+/* Add to Cart Button */
+.add-to-cart-btn {
+    background: #008a00;
+    border: none;
+    font-size: 1.2rem;
+    transition: 0.3s;
+}
+
+.add-to-cart-btn:hover {
+    background: #00aa00;
+    box-shadow: 0 0 20px rgba(0, 138, 0, 0.5);
+}
+/* Footer */
+.site-footer {
+  background: #000000;
+  padding: 40px 60px 20px;
+  font-family: system-ui, sans-serif;
+}
+
+.footer-top {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr 1fr auto;
+  gap: 40px;
+}
+
+.footer-col h4 {
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+
+.footer-col a {
+  display: block;
+  font-size: 13px;
+  color: #cccccc;
+  text-decoration: none;
+  margin-bottom: 10px;
+}
+
+.footer-col a:hover {
+  text-decoration: underline;
+}
+
+.brand .logo {
+  font-size: 28px;
+  font-weight: 900;
+}
+
+.brand p {
+  font-size: 13px;
+  color: #c2c2c2;
+  margin: 10px 0 20px;
+}
+
+.social a {
+  margin-right: 10px;
+  font-size: 18px;
+  color: #b1b1b1;
+}
+
+.payments img {
+  width: 40px;
+  margin-bottom: 10px;
+  display: block;
+}
+
+/* BOTTOM */
+.footer-bottom {
+  border-top: 1px solid #ddd;
+  margin-top: 30px;
+  padding-top: 16px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: #666;
+}
+
+.footer-bottom .links a {
+  margin-left: 16px;
+  text-decoration: none;
+  color: #666;
+}
+
+/* ===== FOOTER ENTRY ANIMATION ===== */
+.site-footer {
+  animation: footerFadeUp 0.8s ease forwards;
+}
+
+@keyframes footerFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animation */
+/* Feature */
+.featured-title {
+  font-family: 'Kanit', sans-serif;
+  /* ပိုပြီး ထူထဲတဲ့ Font */
+  font-weight: 900;
+  font-size: 3rem;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 30px;
+
+  /* စာသားကို ပုံထဲကလို နည်းနည်း စောင်းပေးမယ် */
+  display: inline-block;
+  transform: skew(-5deg);
+
+  /* စာသားကို ပိုပြီး ကြွတက်နေအောင် Shadow ထည့်မယ် */
+  text-shadow: 3px 3px 0px #ff0000;
+  /* အနီရောင် Shadow က JB Style နဲ့ လိုက်ဖက်ပါတယ် */
+
+  /* စာသား ပေါ်လာရင် သုံးမယ့် Animation */
+  animation: fadeInSlide 1s ease-out forwards;
+}
+
+/* စာသားလေး အောက်ကနေ အပေါ်ကို ပြေးတက်လာမယ့် Animation */
+@keyframes fadeInSlide {
+  0% {
+    opacity: 0;
+    transform: translateY(20px) skew(-5deg);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0) skew(-5deg);
+  }
+}
+
+/* စာသားပေါ် Mouse တင်ရင် အရောင်ပြောင်းမယ့် Effect */
+.featured-title:hover {
+  color: #ffff00;
+  /* အဝါရောင် ပြောင်းသွားမယ် */
+  text-shadow: 3px 3px 0px #ffffff;
+  transition: 0.3s;
+}
+
+.featured-section {
+  background-color: #000000;
+}
+
+.custom-card {
+  background: #ffffff;
+  padding: 15px;
+  border-radius: 20px;
+  /* Radius ကို နည်းနည်း ပိုကျွေးထားတယ် */
+  position: relative;
+  height: 100%;
+  border: none;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Mouse တင်လိုက်ရင် ကြွလာမယ့် Animation */
+.custom-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 10px 30px rgba(255, 255, 0, 0.2);
+  /* အဝါရောင်သန်းတဲ့ Shadow လေး */
+}
+
+.img-box img {
+  max-width: 100%;
+  height: auto;
+  transition: transform 0.5s ease;
+}
+
+.custom-card:hover .img-box img {
+  transform: scale(1.08);
+  /* ပုံလေး နည်းနည်း ပွလာမယ် */
+}
+
+/* Add to Cart Link Button with Animation */
+.btn-cart-link {
+  display: block;
+  background: #008a00;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  padding: 12px;
+  font-weight: bold;
+  border-radius: 8px;
+  margin-top: 10px;
+  transition: all 0.3s ease;
+}
+
+.btn-cart-link:hover {
+  background: #00b300;
+  color: white;
+  box-shadow: 0 4px 15px rgba(0, 138, 0, 0.4);
+  transform: scale(1.02);
+}
+
+/* Pricing Ticket */
+.ticket {
+  background: #ffff00;
+  border: 2px solid #000;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+/* "ON SALE" Badge ကို ပုံထဲကအတိုင်း ဖြစ်အောင် ပြင်ဆင်ခြင်း */
+.badge-sale {
+  background: #ff0000;
+  color: white;
+  font-weight: 900;
+  font-size: 14px;
+  padding: 2px 12px;
+  border: 2px solid #000;
+  /* အနက်ရောင်ဘောင် */
+  position: absolute;
+  top: 15px;
+  left: 10px;
+  z-index: 10;
+  /* အနားစောင်းပေးဖို့ (Skew effect) */
+  transform: skew(-10deg);
+
+  /* စာသားက အရမ်းစောင်းမသွားအောင် ပြန်ထိန်းတာ */
+  display: inline-block;
+  font-family: 'Arial Black', sans-serif;
+  letter-spacing: 0.5px;
+  box-shadow: 2px 2px 0px #000;
+  /* အောက်က အနက်ရောင် Shadow လေးနည်းနည်းပါမယ် */
+}
+
+/* Card Hover လုပ်ရင် Badge လေးပါ လှုပ်သွားအောင် Animation ထည့်မယ် */
+.custom-card:hover .badge-sale {
+  animation: wiggle 0.5s ease-in-out;
+}
+
+@keyframes wiggle {
+  0% {
+    transform: skew(-10deg) scale(1);
+  }
+
+  50% {
+    transform: skew(-10deg) scale(1.1);
+  }
+
+  100% {
+    transform: skew(-10deg) scale(1);
+  }
+}
+
+.ticket-price {
+  font-size: 24px;
+  font-weight: 900;
+  color: #000;
+  text-align: center;
+}
+
+.ticket-off {
+  background: #000;
+  color: #fff;
+  font-size: 10px;
+  text-align: center;
+  padding: 2px;
+}
+
+/* Brand Name - ပုံထဲကလို ရှင်းလင်းပြတ်သားစေရန် */
+.brand {
+  font-family: 'Arial Black', Gadget, sans-serif;
+  font-size: 11px;
+  font-weight: 900;
+  color: #333;
+  letter-spacing: 0.5px;
+  margin-bottom: 2px;
+  text-transform: uppercase;
+  /* စာလုံးအကြီးဖြစ်စေရန် */
+}
+
+/* Product Name - ပိုလှပပြီး ဖတ်ရလွယ်ကူစေရန် */
+.product-name {
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: #000;
+  line-height: 1.3;
+  height: 40px;
+  /* စာသား ၂ ကြောင်းစာအတွက် အမြင့်သတ်မှတ်ချက် */
+  display: -webkit-box;
+  overflow: hidden;
+  margin-bottom: 8px;
+  transition: color 0.3s ease;
+}
+
+/* Mouse တင်လိုက်ရင် Product Name အရောင်လေး ပြောင်းသွားမယ့် Animation */
+.custom-card:hover .product-name {
+  color: #008a00;
+  /* Add to cart button အရောင်နဲ့ လိုက်ဖက်အောင် အစိမ်းရောင်ပြောင်းမယ် */
+}
+
+.rating {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  /* Star လေးတွေကြား အကွာအဝေး */
+}
+
+/* Star အရောင် အဝါရောင်ပြောင်းရန် */
+.rating i {
+  color: #ffc107;
+  font-size: 12px;
+}
+
+.review-count {
+  color: #666;
+  font-size: 11px;
+  margin-left: 5px;
+}
+/* Feature */
+/* Cash */
+/* contact */
+/* Section Header with Neon Line */
+.section-header {
+    font-weight: 800;
+    color: #fff;
+    border-left: 5px solid #ffff00;
+    padding-left: 15px;
+}
+
+/* Input Styles */
+.jb-input-neon {
+    width: 100%;
+    background: #111;
+    border: 1px solid #333;
+    color: #fff;
+    padding: 12px 15px;
+    border-radius: 4px;
+    transition: 0.3s ease;
+}
+
+.jb-input-neon:focus {
+    outline: none;
+    border-color: #ffff00;
+    box-shadow: 0 0 20px rgba(255, 255, 0, 0.3);
+    transform: scale(1.01);
+}
+
+/* Send Button Animation */
+.btn-neon-send {
+    background: #ffff00;
+    color: #000;
+    border: none;
+    padding: 15px;
+    font-weight: 900;
+    border-radius: 4px;
+    transition: 0.4s;
+}
+
+.btn-neon-send:hover {
+    box-shadow: 0 0 30px #ffff00;
+    transform: translateY(-5px);
+    letter-spacing: 2px;
+}
+
+/* Info Box Icons */
+.icon-box-neon {
+    width: 50px;
+    height: 50px;
+    background: #111;
+    border: 1px solid #ffff00;
+    color: #ffff00;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(255, 255, 0, 0.2);
+}
+
+/* Map Box Styling */
+.neon-map-box {
+    height: 250px;
+    background: #1a1a1a;
+    border: 1px solid #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #444;
+    border-radius: 8px;
+    transition: 0.5s;
+}
+
+.neon-map-box:hover {
+    border-color: #ffff00;
+    box-shadow: 0 0 20px rgba(255, 255, 0, 0.1);
+}
+/* Footer */
+.site-footer {
+  background: #000000;
+  padding: 40px 60px 20px;
+  font-family: system-ui, sans-serif;
+}
+
+.footer-top {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr 1fr auto;
+  gap: 40px;
+}
+
+.footer-col h4 {
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+
+.footer-col a {
+  display: block;
+  font-size: 13px;
+  color: #cccccc;
+  text-decoration: none;
+  margin-bottom: 10px;
+}
+
+.footer-col a:hover {
+  text-decoration: underline;
+}
+
+.brand .logo {
+  font-size: 28px;
+  font-weight: 900;
+}
+
+.brand p {
+  font-size: 13px;
+  color: #c2c2c2;
+  margin: 10px 0 20px;
+}
+
+.social a {
+  margin-right: 10px;
+  font-size: 18px;
+  color: #b1b1b1;
+}
+
+.payments img {
+  width: 40px;
+  margin-bottom: 10px;
+  display: block;
+}
+
+/* BOTTOM */
+.footer-bottom {
+  border-top: 1px solid #ddd;
+  margin-top: 30px;
+  padding-top: 16px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: #666;
+}
+
+.footer-bottom .links a {
+  margin-left: 16px;
+  text-decoration: none;
+  color: #666;
+}
+
+/* ===== FOOTER ENTRY ANIMATION ===== */
+.site-footer {
+  animation: footerFadeUp 0.8s ease forwards;
+}
+
+@keyframes footerFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animation */
+/* Feature */
+.featured-title {
+  font-family: 'Kanit', sans-serif;
+  /* ပိုပြီး ထူထဲတဲ့ Font */
+  font-weight: 900;
+  font-size: 3rem;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 30px;
+
+  /* စာသားကို ပုံထဲကလို နည်းနည်း စောင်းပေးမယ် */
+  display: inline-block;
+  transform: skew(-5deg);
+
+  /* စာသားကို ပိုပြီး ကြွတက်နေအောင် Shadow ထည့်မယ် */
+  text-shadow: 3px 3px 0px #ff0000;
+  /* အနီရောင် Shadow က JB Style နဲ့ လိုက်ဖက်ပါတယ် */
+
+  /* စာသား ပေါ်လာရင် သုံးမယ့် Animation */
+  animation: fadeInSlide 1s ease-out forwards;
+}
+
+/* စာသားလေး အောက်ကနေ အပေါ်ကို ပြေးတက်လာမယ့် Animation */
+@keyframes fadeInSlide {
+  0% {
+    opacity: 0;
+    transform: translateY(20px) skew(-5deg);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0) skew(-5deg);
+  }
+}
+
+/* စာသားပေါ် Mouse တင်ရင် အရောင်ပြောင်းမယ့် Effect */
+.featured-title:hover {
+  color: #ffff00;
+  /* အဝါရောင် ပြောင်းသွားမယ် */
+  text-shadow: 3px 3px 0px #ffffff;
+  transition: 0.3s;
+}
+
+.featured-section {
+  background-color: #000000;
+}
+
+.custom-card {
+  background: #ffffff;
+  padding: 15px;
+  border-radius: 20px;
+  /* Radius ကို နည်းနည်း ပိုကျွေးထားတယ် */
+  position: relative;
+  height: 100%;
+  border: none;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Mouse တင်လိုက်ရင် ကြွလာမယ့် Animation */
+.custom-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 10px 30px rgba(255, 255, 0, 0.2);
+  /* အဝါရောင်သန်းတဲ့ Shadow လေး */
+}
+
+.img-box img {
+  max-width: 100%;
+  height: auto;
+  transition: transform 0.5s ease;
+}
+
+.custom-card:hover .img-box img {
+  transform: scale(1.08);
+  /* ပုံလေး နည်းနည်း ပွလာမယ် */
+}
+
+/* Add to Cart Link Button with Animation */
+.btn-cart-link {
+  display: block;
+  background: #008a00;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  padding: 12px;
+  font-weight: bold;
+  border-radius: 8px;
+  margin-top: 10px;
+  transition: all 0.3s ease;
+}
+
+.btn-cart-link:hover {
+  background: #00b300;
+  color: white;
+  box-shadow: 0 4px 15px rgba(0, 138, 0, 0.4);
+  transform: scale(1.02);
+}
+
+/* Pricing Ticket */
+.ticket {
+  background: #ffff00;
+  border: 2px solid #000;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+/* "ON SALE" Badge ကို ပုံထဲကအတိုင်း ဖြစ်အောင် ပြင်ဆင်ခြင်း */
+.badge-sale {
+  background: #ff0000;
+  /* အနီရောင် */
+  color: white;
+  font-weight: 900;
+  font-size: 14px;
+  padding: 2px 12px;
+  border: 2px solid #000;
+  /* အနက်ရောင်ဘောင် */
+  position: absolute;
+  top: 15px;
+  left: 10px;
+  z-index: 10;
+  /* အနားစောင်းပေးဖို့ (Skew effect) */
+  transform: skew(-10deg);
+
+  /* စာသားက အရမ်းစောင်းမသွားအောင် ပြန်ထိန်းတာ */
+  display: inline-block;
+  font-family: 'Arial Black', sans-serif;
+  letter-spacing: 0.5px;
+  box-shadow: 2px 2px 0px #000;
+  /* အောက်က အနက်ရောင် Shadow လေးနည်းနည်းပါမယ် */
+}
+
+/* Card Hover လုပ်ရင် Badge လေးပါ လှုပ်သွားအောင် Animation ထည့်မယ် */
+.custom-card:hover .badge-sale {
+  animation: wiggle 0.5s ease-in-out;
+}
+
+@keyframes wiggle {
+  0% {
+    transform: skew(-10deg) scale(1);
+  }
+
+  50% {
+    transform: skew(-10deg) scale(1.1);
+  }
+
+  100% {
+    transform: skew(-10deg) scale(1);
+  }
+}
+
+.ticket-price {
+  font-size: 24px;
+  font-weight: 900;
+  color: #000;
+  text-align: center;
+}
+
+.ticket-off {
+  background: #000;
+  color: #fff;
+  font-size: 10px;
+  text-align: center;
+  padding: 2px;
+}
+
+/* Brand Name - ပုံထဲကလို ရှင်းလင်းပြတ်သားစေရန် */
+.brand {
+  font-family: 'Arial Black', Gadget, sans-serif;
+  font-size: 11px;
+  font-weight: 900;
+  color: #333;
+  letter-spacing: 0.5px;
+  margin-bottom: 2px;
+  text-transform: uppercase;
+  /* စာလုံးအကြီးဖြစ်စေရန် */
+}
+
+/* Product Name - ပိုလှပပြီး ဖတ်ရလွယ်ကူစေရန် */
+.product-name {
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: #000;
+  line-height: 1.3;
+  height: 40px;
+  /* စာသား ၂ ကြောင်းစာအတွက် အမြင့်သတ်မှတ်ချက် */
+  display: -webkit-box;
+  overflow: hidden;
+  margin-bottom: 8px;
+  transition: color 0.3s ease;
+}
+
+/* Mouse တင်လိုက်ရင် Product Name အရောင်လေး ပြောင်းသွားမယ့် Animation */
+.custom-card:hover .product-name {
+  color: #008a00;
+  /* Add to cart button အရောင်နဲ့ လိုက်ဖက်အောင် အစိမ်းရောင်ပြောင်းမယ် */
+}
+
+.rating {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  /* Star လေးတွေကြား အကွာအဝေး */
+}
+
+/* Star အရောင် အဝါရောင်ပြောင်းရန် */
+.rating i {
+  color: #ffc107;
+  font-size: 12px;
+}
+
+.review-count {
+  color: #666;
+  font-size: 11px;
+  margin-left: 5px;
+}
+/* Feature */
+/* Contact */
+/* Privacy */
+/* Privacy Policy Custom Styles */
+.privacy-section {
+    padding: 80px 0;
+    background: radial-gradient(circle at top, #1a1a1a 0%, #000 70%);
+}
+
+.privacy-header h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: #ffff00; /* Neon Yellow အရောင် */
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    /* စာသားကို လင်းနေအောင်လုပ်ခြင်း */
+    text-shadow: 0 0 10px rgba(255, 255, 0, 0.7),
+                 0 0 20px rgba(255, 255, 0, 0.5),
+                 0 0 40px rgba(255, 255, 0, 0.3);
+    margin-bottom: 10px;
+}
+.title-line {
+    width: 80px;
+    height: 4px;
+    background: #ffff00;
+    margin: 20px auto;
+    box-shadow: 0 0 15px #ffff00;
+}
+
+.privacy-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+    padding: 0 20px;
+}
+
+/* Glassmorphism Effect */
+.policy-card.glass {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 40px;
+    transition: 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.policy-card.glass:hover {
+    background: rgba(255, 255, 255, 0.07);
+    border-color: #ffff00;
+    transform: translateY(-10px);
+}
+
+.icon-box {
+    font-size: 2.5rem;
+    color: #ffff00;
+    margin-bottom: 20px;
+}
+
+.policy-card h3 {
+    color: #fff;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.policy-card p {
+    color: #b0b0b0;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+.btn-back-home {
+    display: inline-block;
+    padding: 12px 35px;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #ffff00;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: 2px solid #ffff00;
+    border-radius: 50px; /* ဆေးတောင့်ပုံစံ အဝိုင်းစောင်း */
+    background: transparent;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+    margin-top: 30px;
+}
+
+.btn-back-home:hover {
+    color: #000;
+    background: #ffff00;
+    box-shadow: 0 0 20px rgba(255, 255, 0, 0.6);
+    transform: translateY(-3px);
+}
+
+.btn-back-home i {
+    margin-right: 8px; /* Icon နဲ့ စာသားကြား အကွာအဝေး */
+}
+/* Privacy Policy */
+/* Breaking News Container */
+.breaking-news-container {
+    display: flex;
+    align-items: center;
+    background: palegreen; /* ပုံထဲကအတိုင်း အဖြူရောင် */
+    height: 45px;
+    overflow: hidden;
+    border-bottom: 2px solid #ffff00;
+}
+
+/* BREAKING ဆိုတဲ့ အနီရောင် (သို့) အမည်းရောင် Label */
+.ticker-label {
+    background: #000;
+    color: #ffff00;
+    padding: 0 20px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    z-index: 10;
+    position: relative;
+}
+
+/* စာသားရွေ့မည့် ဧရိယာ */
+.ticker-wrapper {
+    flex-grow: 1;
+    overflow: hidden;
+    white-space: nowrap; /* စာသားတွေကို တစ်ကြောင်းတည်း ဖြစ်စေရန် */
+}
+
+/* Animation အလုပ်လုပ်မည့်နေရာ */
+.ticker-content {
+    display: inline-block;
+    padding-left: 100%; /* စခရင်အပြင်ကနေ စထွက်ရန် */
+    animation: ticker-move 30s linear infinite; /* စက္ကန့် ၃၀ ကြာ တရွေ့ရွေ့သွားမည် */
+}
+
+.ticker-content span {
+    display: inline-block;
+    padding-right: 50px; /* စာသားတစ်ခုနဲ့တစ်ခုကြား အကွာအဝေး */
+    color: #000;
+    font-weight: 500;
+}
+
+/* စာသားရွေ့လျားမှု Animation Logic */
+@keyframes ticker-move {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+}
+
+/* Mouse တင်ထားရင် ခဏရပ်ပေးရန် */
+.ticker-wrapper:hover .ticker-content {
+    animation-play-state: paused;
+}

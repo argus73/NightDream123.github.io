@@ -1,0 +1,1760 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project</title>
+  <link rel="stylesheet" href="Style.css">
+  <link rel="stylesheet" href="./Bootstrap/bootstrap.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Kanit:wght@900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark custom-nav sticky-top">
+    <div class="container-fluid">
+      <a class="navbar-brand neon-brand" href="#">
+        <span class="text-light">Night</span><span class="text-warning">Dream</span>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" href="index.html"><i class="bi bi-house"></i> Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="News.html"><i class="bi bi-newspaper"></i> News</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Reviews.html"><i class="bi bi-star"></i> Reviews</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Cash.html"><i class="bi bi-cash-coin"></i> Cash</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Contact.html"><i class="bi bi-telephone"></i> Contact</a>
+          </li>
+        </ul>
+
+        <form class="search-form d-flex align-items-center">
+          <i class="bi bi-search search-icon"></i>
+          <input type="search" placeholder="Search phone...">
+        </form>
+      </div>
+    </div>
+  </nav>
+  <!-- Navbar -->
+  <!-- Slide -->
+  <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"></button>
+    </div>
+
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="./Image/54ca339992aec2014c383eab8a2f92ad.webp" class="d-block w-100 slider-img" alt="Poco">
+        <div class="carousel-caption custom-caption">
+          <div class="caption-text-box">
+            <h5 class="caption-title">Poco M8 Pro</h5>
+            <h4 class="caption-text">Snapdragon 7s Gen 4</h4>
+            <h4 class="caption-text">6500 mAh Battery</h4>
+            <a href="#" class="btn btn-primary btn-animate">Learn More</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <img src="./Image/Xiaomi-Redmi-15C-5G-launched-kv-2.jpg" class="d-block w-100 slider-img" alt="Realme">
+        <div class="carousel-caption custom-caption">
+          <div class="caption-text-box">
+            <h5 class="caption-title">Realme 15c</h5>
+            <h4 class="caption-text">Dimensity 6300</h4>
+            <h4 class="caption-text">6000 mAh Battery</h4>
+            <a href="#" class="btn btn-primary btn-animate">Learn More</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <img src="./Image/gsmarena_000.jpg" class="d-block w-100 slider-img" alt="Black Shark">
+        <div class="carousel-caption custom-caption">
+          <div class="caption-text-box">
+            <h5 class="caption-title">Balck Shark 4Pro</h5>
+            <h4 class="caption-text">Snapdragon 888 5G</h4>
+            <h4 class="caption-text">4500mAh battery</h4>
+            <a href="#" class="btn btn-primary btn-animate">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </div> <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+      data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+  </div>
+  <!-- Slide -->
+  <!-- Reviews -->
+  <section class="review-section bg-black py-5">
+    <div class="container-fluid px-md-5">
+      <div class="container text-center py-5">
+        <div class="reviews-header-container">
+          <div class="header-glow-orb"></div>
+
+          <div class="reviews-title-wrapper">
+            <span class="title-top-line"></span>
+            <h1 class="minimal-reviews-title">REVIEWS</h1>
+            <span class="title-bottom-line"></span>
+          </div>
+
+          <p class="header-subtitle">THE FUTURE OF MOBILE TECH</p>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-lg-6">
+          <a href="Reviews.html" class="card-anchor">
+            <div class="full-review-card">
+              <div class="card-image-part">
+                <div class="neon-portal-bg"></div>
+                <img src="./Image/s-l1600_3-removebg-preview.png" class="main-phone-img" alt="Phone">
+              </div>
+
+              <div class="card-info-part">
+                <div class="top-meta">
+                  <span class="score-badge">4.0</span>
+                  <span class="category-tag">NEWS</span>
+                </div>
+                <h3 class="phone-title">Xiaomi 17 Ultra<br>Leica Edition review</h3>
+                <p class="phone-summary">Pinnacle Photography<br>Leica 1-inch main,200Mp Telephoto</p>
+
+                <div class="card-icons-row d-flex gap-4 mt-auto">
+                  <div class="mini-icon-box">
+                    <i class="bi bi-chat-left-dots-fill"></i>
+                    <span>Message</span>
+                  </div>
+                  <div class="mini-icon-box">
+                    <i class="bi bi-star-half"></i>
+                    <span>20 Views</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-lg-6">
+          <a href="Reviews.html" class="card-anchor">
+            <div class="full-review-card secondary-neon">
+              <div class="card-image-part">
+                <div class="neon-portal-bg"></div>
+                <img src="./Image/moto-g-power-5g-7812-removebg-preview.png" class="main-phone-img" alt="Phone">
+              </div>
+              <div class="card-info-part">
+                <div class="top-meta">
+                  <span class="score-badge">3.0</span>
+                  <span class="category-tag">NEWS</span>
+                </div>
+                <h3 class="phone-title">Moto G Power<br>(2026) review</h3>
+                <p class="phone-summary">BOUNDLESS<br>ENTERTAINMENT</p>
+                <div class="card-icons-row d-flex gap-4 mt-auto">
+                  <div class="mini-icon-box">
+                    <i class="bi bi-chat-left-dots-fill"></i>
+                    <span>Message</span>
+                  </div>
+                  <div class="mini-icon-box">
+                    <i class="bi bi-star-half"></i>
+                    <span>20 Views</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-lg-6">
+          <a href="Reviews.html" class="card-anchor">
+            <div class="full-review-card secondary-neon">
+              <div class="card-image-part">
+                <div class="neon-portal-bg"></div>
+                <img src="./Image/440-440-white.png" class="main-phone-img" alt="Phone">
+              </div>
+              <div class="card-info-part">
+                <div class="top-meta">
+                  <span class="score-badge">5.0</span>
+                  <span class="category-tag">NEWS</span>
+                </div>
+                <h3 class="phone-title">Oppo Reno15 Pro<br>(mini) review</h3>
+                <p class="phone-summary"> 4K HDR Ultra-steady Video<br>200Mp Ultra-Clear Main Camera | ColorOS 16</p>
+                <div class="card-icons-row d-flex gap-4 mt-auto">
+                  <div class="mini-icon-box">
+                    <i class="bi bi-chat-left-dots-fill"></i>
+                    <span>Message</span>
+                  </div>
+                  <div class="mini-icon-box">
+                    <i class="bi bi-star-half"></i>
+                    <span>24 Views</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-lg-6">
+          <a href="Reviews.html" class="card-anchor">
+            <div class="full-review-card secondary-neon">
+              <div class="card-image-part">
+                <div class="neon-portal-bg"></div>
+                <img src="./Image/1767342181500a147324e274748b986f805029bc6728a-removebg-preview.png"
+                  class="main-phone-img" alt="Phone">
+              </div>
+              <div class="card-info-part">
+                <div class="top-meta">
+                  <span class="score-badge">4.0</span>
+                  <span class="category-tag">NEWS</span>
+                </div>
+                <h3 class="phone-title">Realme 16 Pro+<br>review</h3>
+                <p class="phone-summary"> 200Mp Portrait Master<br>200Mp Lumacolor Camera |Ai Instant Clip</p>
+                <div class="card-icons-row d-flex gap-4 mt-auto">
+                  <div class="mini-icon-box">
+                    <i class="bi bi-chat-left-dots-fill"></i>
+                    <span>Message</span>
+                  </div>
+                  <div class="mini-icon-box">
+                    <i class="bi bi-star-half"></i>
+                    <span>15 Views</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-lg-6">
+          <a href="Reviews.html" class="card-anchor">
+            <div class="full-review-card secondary-neon">
+              <div class="card-image-part">
+                <div class="neon-portal-bg"></div>
+                <img src="./Image/images-removebg-preview.png" class="main-phone-img" alt="Phone">
+              </div>
+              <div class="card-info-part">
+                <div class="top-meta">
+                  <span class="score-badge">4.0</span>
+                  <span class="category-tag">NEWS</span>
+                </div>
+                <h3 class="phone-title">Honor Magic8 Pro<br>review</h3>
+                <p class="phone-summary">Magic In One Touch<br>AI</p>
+                <div class="card-icons-row d-flex gap-4 mt-auto">
+                  <div class="mini-icon-box">
+                    <i class="bi bi-chat-left-dots-fill"></i>
+                    <span>Message</span>
+                  </div>
+                  <div class="mini-icon-box">
+                    <i class="bi bi-star-half"></i>
+                    <span>9 Views</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-lg-6">
+          <a href="Reviews.html" class="card-anchor">
+            <div class="full-review-card secondary-neon">
+              <div class="card-image-part">
+                <div class="neon-portal-bg"></div>
+                <img src="./Image/Poco-M8-Pro-black-silver-removebg-preview.png" class="main-phone-img" alt="Phone">
+              </div>
+              <div class="card-info-part">
+                <div class="top-meta">
+                  <span class="score-badge">4.0</span>
+                  <span class="category-tag">NEWS</span>
+                </div>
+                <h3 class="phone-title">Poco M8 Pro<br>review</h3>
+                <p class="phone-summary">All Power<br>All Play</p>
+                <div class="card-icons-row d-flex gap-4 mt-auto">
+                  <div class="mini-icon-box">
+                    <i class="bi bi-chat-left-dots-fill"></i>
+                    <span>Message</span>
+                  </div>
+                  <div class="mini-icon-box">
+                    <i class="bi bi-star-half"></i>
+                    <span> Views</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Reviews -->
+  <!-- News -->
+  <!-- NEWS CARDS -->
+  <section class="news-section">
+
+    <h4 class="section-heading">LATEST NEWS</h4>
+
+    <div class="horizontal-scroll">
+
+      <div class="news-card-row" onclick="window.location='news-detail.html'">
+
+        <img src="./Image/Home News/gsmarena_de.jpg" alt="">
+
+        <div class="news-text">
+          <h5>Deals: OnePlus 15R falls to the same price as the Poco F8 Ultra, Pixel 10 Pro and Pro XL on sale too</h5>
+          <p>Last week, we looked at the OnePlus 15R – with a €100 discount...</p>
+          <div class="meta-row d-flex align-items-center">
+            <a href="#like" class="meta-link me-3">
+              <i class="bi bi-heart"></i> 15
+            </a>
+
+            <a href="#comments" class="meta-link me-3">
+              <i class="bi bi-chat-dots"></i> 5
+            </a>
+            <a href="#reviews" class="meta-link">
+              <i class="bi bi-alarm"></i> 25 Jun 2026
+            </a>
+          </div>
+          <!-- BUTTON INSIDE CARD -->
+          <a href="news-detail.html" class="card-btn">
+            Read more
+            <i class="bi bi-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+      <!-- 2 -->
+      <div class="news-card-row" onclick="window.location='news-detail.html'">
+
+        <img src="./Image/Home News/gsmarena_001.jpg" alt="">
+
+        <div class="news-text">
+          <h5>Weekly poll: can the 200MP cameras of the Realme 16 Pro and 16 Pro+ get you to buy one?</h5>
+          <p>A couple of weeks ago, Realme launched the Realme 16 Pro and...</p>
+          <!-- Icons -->
+          <div class="meta-row d-flex align-items-center">
+            <a href="#like" class="meta-link me-3">
+              <i class="bi bi-heart"></i> 15
+            </a>
+            <a href="#reviews" class="meta-link">
+              <i class="bi bi-alarm"></i> 25 Jun 2026
+            </a>
+          </div>
+          <!-- BUTTON INSIDE CARD -->
+          <a href="news-detail.html" class="card-btn">
+            Read more
+            <i class="bi bi-arrow-right"></i>
+          </a>
+        </div>
+
+      </div>
+      <!-- 3 -->
+      <div class="news-card-row" onclick="window.location='news-detail.html'">
+
+        <img src="./Image/Home News/gsmarena_000.jpg" alt="">
+
+        <div class="news-text">
+          <h5>Weekly poll results: the small Oppo Reno15 Pro has a shot, the other two miss the mark Work?</h5>
+          <p>Not so long ago, it looked like mini smartphones were all but dead...</p>
+          <!-- Icons -->
+          <div class="meta-row d-flex align-items-center">
+            <a href="#like" class="meta-link me-3">
+              <i class="bi bi-heart"></i> 15
+            </a>
+
+            <a href="#comments" class="meta-link me-3">
+              <i class="bi bi-chat-dots"></i> 5
+            </a>
+            <a href="#reviews" class="meta-link">
+              <i class="bi bi-alarm"></i> 25 Jun 2026
+            </a>
+          </div>
+          <!-- BUTTON INSIDE CARD -->
+          <a href="news-detail.html" class="card-btn">
+            Read more
+            <i class="bi bi-arrow-right"></i>
+          </a>
+        </div>
+
+      </div>
+      <!-- 4 -->
+      <div class="news-card-row">
+
+        <img src="./Image/Home News/gsmarena_001 (1).jpg" alt="">
+
+        <div class="news-text">
+          <h5>iQOO 15 Ultra confirmed to feature shoulder triggers with 600Hz sampling rate and haptic feedback</h5>
+          <p>
+            The iQOO 15 Ultra will launch in China next month, and images...
+          </p>
+          <!-- Icons -->
+          <div class="meta-row d-flex align-items-center">
+            <a href="#like" class="meta-link me-3">
+              <i class="bi bi-heart"></i> 15
+            </a>
+
+            <a href="#comments" class="meta-link me-3">
+              <i class="bi bi-chat-dots"></i> 5
+            </a>
+            <a href="#reviews" class="meta-link">
+              <i class="bi bi-alarm"></i> 25 Jun 2026
+            </a>
+          </div>
+          <!-- BUTTON LINK -->
+          <a href="news-detail.html" class="card-btn">
+            Read more <i class="bi bi-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+      <!-- 5 -->
+      <div class="see-more-wrap">
+        <a href="news.html" class="see-more-btn">
+          See more
+          <i class="bi bi-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+  <!-- News -->
+  <!-- Mobile Phone -->
+  <section class="category-grid-section py-5">
+    <div class="container-fluid px-md-5">
+
+      <div class="title-wrapper mb-4">
+        <h2 class="latest-title">Mobile Phones</h2>
+        <div class="yellow-underline"></div>
+      </div>
+
+      <div class="row row-cols-2 row-cols-sm-3 row-cols-md-5 g-4">
+
+        <div class="col">
+          <a href="#" class="cat-item-card">
+            <div class="cat-circle">
+              <img src="./Image/Mobile Phone/54ca339992aec2014c383eab8a2f92ad.webp" alt="Category">
+            </div>
+            <p class="cat-label">Apple iPhone</p>
+          </a>
+        </div>
+
+        <div class="col">
+          <a href="#" class="cat-item-card">
+            <div class="cat-circle">
+              <img
+                src="./Image/Mobile Phone/816900-Product-0-I-638888199003650884_34f91f68-0adb-4c84-a223-a6f261ec1881_400x400.webp"
+                alt="Category">
+            </div>
+            <p class="cat-label">Google Pixel 10</p>
+          </a>
+        </div>
+
+        <div class="col">
+          <a href="#" class="cat-item-card">
+            <div class="cat-circle">
+              <img src="./Image/Mobile Phone/815601-Product-0-I-638863105286673684.webp" alt="Category">
+            </div>
+            <p class="cat-label">Galaxy Z Fold+<br>Flip</p>
+          </a>
+        </div>
+
+        <div class="col">
+          <a href="#" class="cat-item-card">
+            <div class="cat-circle">
+              <img src="./Image/Mobile Phone/795472-Product-0-I-638730265205510658.webp" alt="Category">
+            </div>
+            <p class="cat-label">Galaxy S25</p>
+          </a>
+        </div>
+
+        <div class="col">
+          <a href="#" class="cat-item-card">
+            <div class="cat-circle">
+              <img src="./Image/Mobile Phone/746516-Product-0-I-638755863010704628_600x600.webp" alt="Category">
+            </div>
+            <p class="cat-label">iPhone 16</p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Latest devices -->
+  <!-- Featured -->
+  <section class="featured-section py-5">
+    <div class="container">
+      <h2 class="featured-title">FEATURED</h2>
+      <div class="row row-cols-2 row-cols-md-4 g-4">
+
+        <div class="col">
+          <div class="custom-card">
+            <div class="badge-sale">ON SALE</div>
+            <i class="far fa-heart wishlist"></i>
+            <div class="img-box">
+              <img src="./Image/Fucture/803012-Product-0-I-638762149202292424_600x600.webp" alt="Samsung Galaxy A56">
+            </div>
+            <div class="content mt-3">
+              <h5 class="brand">SAMSUNG</h5>
+              <h6 class="product-name">Samsung Galaxy A56 5G<br>128GB (Awesome Olive)</h6>
+              <div class="rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <span class="review-count">4.4(1011)</span>
+              </div>
+              <div class="ticket">
+                <div class="ticket-top">TICKET <s>$699</s></div>
+                <div class="ticket-price">$549</div>
+                <div class="ticket-off">$150 OFF^</div>
+              </div>
+              <a href="#" class="btn-cart-link">Add to cart</a>
+            </div>
+          </div>
+        </div>
+        <!-- 1 -->
+        <div class="col">
+          <div class="custom-card">
+            <div class="badge-sale">ON SALE</div>
+            <i class="far fa-heart wishlist"></i>
+            <div class="img-box">
+              <img
+                src="./Image/Fucture/816883-Product-0-I-638888179205590227_3ddf619d-b341-4dc8-a5e4-c45dd0b03ce1_600x600.webp"
+                alt="Samsung Galaxy A56">
+            </div>
+            <div class="content mt-3">
+              <h5 class="brand">Google</h5>
+              <h6 class="product-name">Google Pixel 10 5G 128GB<br>(Indigo)</h6>
+              <div class="rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <i class="bi bi-star"></i>
+                <span class="review-count">3.4(8)</span>
+              </div>
+              <div class="ticket">
+                <div class="ticket-top">TICKET <s>$1347</s></div>
+                <div class="ticket-price">$997</div>
+                <div class="ticket-off">$350 OFF^</div>
+              </div>
+              <a href="#" class="btn-cart-link">Add to cart</a>
+            </div>
+          </div>
+        </div>
+        <!-- 2 -->
+        <div class="col">
+          <div class="custom-card">
+            <div class="badge-sale">ON SALE</div>
+            <i class="far fa-heart wishlist"></i>
+            <div class="img-box">
+              <img src="./Image/Fucture/795811-Product-0-I-638781176405348662_600x600.webp" alt="Samsung Galaxy A56">
+            </div>
+            <div class="content mt-3">
+              <h5 class="brand">Motorola</h5>
+              <h6 class="product-name">Moto G05 4G 64B<br>(Misty Blue)</h6>
+              <div class="rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="bi bi-star"></i>
+                <span class="review-count">4.1(12)</span>
+              </div>
+              <div class="ticket">
+                <div class="ticket-top">TICKET <s>$177</s></div>
+                <div class="ticket-price">$147</div>
+                <div class="ticket-off">$30 OFF^</div>
+              </div>
+              <a href="#" class="btn-cart-link">Add to cart</a>
+            </div>
+          </div>
+        </div>
+        <!-- 3 -->
+        <div class="col">
+          <div class="custom-card">
+            <div class="badge-sale">New At ND!</div>
+            <i class="far fa-heart wishlist"></i>
+            <div class="img-box">
+              <img src="./Image/Fucture/883650-Product-0-I-639040474805140117_600x600.webp" alt="Samsung Galaxy A56">
+            </div>
+            <div class="content mt-3">
+              <h5 class="brand">Nothing(R)</h5>
+              <h6 class="product-name">Nothing Phone (3A) Lite 5G<br>128GB (Black)</h6>
+              <br>
+              <div class="ticket">
+                <div class="ticket-top">TICKET <s>$500</s></div>
+                <div class="ticket-price">$439</div>
+                <div class="ticket-off">$61 OFF^</div>
+              </div>
+              <a href="#" class="btn-cart-link">Add to cart</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Featured -->
+  <!-- Filter Bar -->
+  <div class="filter-wrapper sticky-top bg-black border-bottom-yellow">
+    <div class="container-fluid px-md-5 py-3">
+      <div class="d-flex align-items-center justify-content-between flex-wrap">
+
+        <div class="d-flex gap-2 align-items-center flex-wrap">
+          <div class="dropdown custom-filter">
+            <button class="btn-jb-filter active dropdown-toggle" data-bs-toggle="dropdown">
+              Price <i class="bi bi-chevron-down ms-5"></i>
+            </button>
+            <div class="dropdown-menu p-4 dropdown-anim shadow-glow">
+              <h6 class="text-center mb-3 small text-muted">6873 results</h6>
+              <div class="range-container mb-3">
+                <input type="range" class="jb-range" min="0" max="3799" value="1500">
+              </div>
+              <div class="d-flex justify-content-between gap-2">
+                <div class="price-input-box">Min <br> <input type="text" value="$0"></div>
+                <div class="price-input-box">Max <br> <input type="text" value="$3799"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="dropdown custom-filter">
+            <button class="btn-jb-filter dropdown-toggle" data-bs-toggle="dropdown">
+              Phone Type <i class="bi bi-chevron-down ms-5"></i>
+            </button>
+            <div class="dropdown-menu p-3 dropdown-anim shadow-glow">
+              <div class="search-inner mb-2">
+                <i class="bi bi-search"></i>
+                <input type="text" placeholder="Search brands...">
+              </div>
+              <div class="scroll-list">
+                <label class="item-row"><input type="checkbox"> <span>iPhone</span> <small>100</small></label>
+                <label class="item-row"><input type="checkbox"> <span>Samsung</span> <small>30</small></label>
+                <label class="item-row"><input type="checkbox"> <span>Realme</span> <small>20</small></label>
+                <label class="item-row"><input type="checkbox"> <span>Rog</span> <small>10</small></label>
+                <label class="item-row"><input type="checkbox"> <span>Black Shark</span> <small>12</small></label>
+                <label class="item-row"><input type="checkbox"> <span>Poco</span> <small>15</small></label>
+                <label class="item-row"><input type="checkbox"> <span>Nothing</span> <small>3</small></label>
+
+              </div>
+            </div>
+          </div>
+
+          <div class="dropdown custom-filter">
+            <button class="btn-jb-filter dropdown-toggle" data-bs-toggle="dropdown">
+              Category <i class="bi bi-chevron-down ms-5"></i>
+            </button>
+            <div class="dropdown-menu p-3 dropdown-anim shadow-glow">
+              <div class="search-inner mb-2">
+                <i class="bi bi-search"></i>
+                <input type="text" placeholder="Search...">
+              </div>
+              <div class="scroll-list">
+                <label class="item-row"><input type="checkbox"> <span>iPhone 12</span> <small>100</small></label>
+                <label class="item-row"><input type="checkbox"> <span>iPhone 13</span> <small>93</small></label>
+                <label class="item-row"><input type="checkbox"> <span>iPhone 13 Pro Max</span> <small>81</small></label>
+                <label class="item-row"><input type="checkbox"> <span>iPhone 11</span> <small>74</small></label>
+                <label class="item-row"><input type="checkbox"> <span>iPhone 14 Pro</span> <small>70</small></label>
+                <label class="item-row"><input type="checkbox"> <span>iPhone 13 Pro</span> <small>64</small></label>
+                <label class="item-row"><input type="checkbox"> <span>Google Pixel 9 Pro</span>
+                  <small>37</small></label>
+                <label class="item-row"><input type="checkbox"> <span>Galaxy S25 Ultra</span> <small>33</small></label>
+                <label class="item-row"><input type="checkbox"> <span>Samsung Galaxy S25 Plus</span>
+                  <small>12</small></label>
+                <label class="item-row"><input type="checkbox"> <span>Samsung Galaxy S25 Plus 5G</span>
+                  <small>11</small></label>
+              </div>
+            </div>
+          </div>
+
+          <div class="dropdown custom-filter">
+            <button class="btn-jb-filter dropdown-toggle" data-bs-toggle="dropdown">
+              Colour <i class="bi bi-chevron-down ms-3"></i>
+            </button>
+            <div class="dropdown-menu p-3 dropdown-anim shadow-glow">
+              <div class="search-inner mb-2">
+                <i class="bi bi-search"></i>
+                <input type="text" placeholder="Search...">
+              </div>
+              <div class="scroll-list">
+                <label class="item-row"><input type="checkbox"> <span>Black</span> <small>527</small></label>
+                <label class="item-row"><input type="checkbox"> <span>White</span> <small>316</small></label>
+                <label class="item-row"><input type="checkbox"> <span>Blue</span> <small>127</small></label>
+                <label class="item-row"><input type="checkbox"> <span>Clear</span> <small>30</small></label>
+                <label class="item-row"><input type="checkbox"> <span>Red</span> <small>20</small></label>
+                <label class="item-row"><input type="checkbox"> <span>Grey</span> <small>10</small></label>
+                <label class="item-row"><input type="checkbox"> <span>Pink</span> <small>21</small></label>
+                <label class="item-row"><input type="checkbox"> <span>Silver</span> <small>25</small></label>
+                <label class="item-row"><input type="checkbox"> <span>Gold</span> <small>11</small></label>
+                <label class="item-row"><input type="checkbox"> <span>Green</span> <small>7</small></label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="sort-section d-flex align-items-center gap-2">
+          <span class="text-white small fw-bold">Sort by:</span>
+          <select class="jb-sort-select">
+            <option>Best Match</option>
+            <option>Price: Low to High</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 1 -->
+  <div class="container-fluid px-md-5 py-5 bg-black">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4">
+
+      <div class="col">
+        <div class="custom-card">
+          <div class="badge-sale">News</div>
+          <i class="far fa-heart wishlist"></i>
+          <div class="img-box">
+            <img src="./Image/Brands/816114-Product-0-I-638930464920302575_600x600.webp" alt="iPhone 17 Pro 265GB">
+          </div>
+          <div class="content mt-3">
+            <h5 class="brand">Apple</h5>
+            <h6 class="product-name">iPhone 17 Pro 265GB<br>(Silver)</h6>
+            <div class="rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="bi bi-star"></i>
+              <span class="review-count">4.1(13)</span>
+            </div>
+            <div class="ticket">
+              <div class="ticket-price">$1999</div>
+            </div>
+            <a href="Add-to-cart.html" class="btn-cart-link">Add to cart</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="custom-card">
+          <div class="badge-sale">News</div>
+          <i class="far fa-heart wishlist"></i>
+          <div class="img-box">
+            <img src="./Image/Brands/816114-Product-0-I-638930464920302575_600x600.webp" alt="iPhone 17 Pro 265GB">
+          </div>
+          <div class="content mt-3">
+            <h5 class="brand">Apple</h5>
+            <h6 class="product-name">iPhone 17 Pro Max<br>265GB (Silver)</h6>
+            <div class="rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <span class="review-count">4.9(28)</span>
+            </div>
+            <div class="ticket">
+              <div class="ticket-price">$2199</div>
+            </div>
+            <a href="#" class="btn-cart-link">Add to cart</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="custom-card">
+          <div class="badge-sale">News</div>
+          <i class="far fa-heart wishlist"></i>
+          <div class="img-box">
+            <img src="./Image/Brands/816123-Product-0-I-638930467806479268_600x600.webp" alt="Samsung Galaxy A56">
+          </div>
+          <div class="content mt-3">
+            <h5 class="brand">Apple</h5>
+            <h6 class="product-name">iPhone 17 Pro Max<br>265GB (Cosmic Orange)</h6>
+            <div class="rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <span class="review-count">4.8(29)</span>
+            </div>
+            <div class="ticket">
+              <div class="ticket-price">$2199</div>
+            </div>
+            <a href="#" class="btn-cart-link">Add to cart</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="custom-card">
+          <div class="badge-sale">News</div>
+          <i class="far fa-heart wishlist"></i>
+          <div class="img-box">
+            <img src="./Image/Brands/816122-Product-0-I-638930468404525251_600x600.webp" alt="Samsung Galaxy A56">
+          </div>
+          <div class="content mt-3">
+            <h5 class="brand">Apple</h5>
+            <h6 class="product-name">iPhone 17 Pro Max<br>265GB (Deep Blue)</h6>
+            <div class="rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <span class="review-count">4.9(28)</span>
+            </div>
+            <div class="ticket">
+              <div class="ticket-price">$2199</div>
+            </div>
+            <a href="#" class="btn-cart-link">Add to cart</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="custom-card">
+          <div class="img-box">
+            <img src="./Image/Brands/816122-Product-0-I-638930468404525251_600x600.webp" alt="Samsung Galaxy A56">
+          </div>
+          <div class="content mt-3">
+            <h5 class="brand">Apple</h5>
+            <h6 class="product-name">iPhone 17 Pro<br>265GB (Deep Blue)</h6>
+            <div class="rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+              <span class="review-count">4.1(38)</span>
+            </div>
+            <div class="ticket">
+              <div class="ticket-price">$1999</div>
+            </div>
+            <a href="#" class="btn-cart-link">Add to cart</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="custom-card">
+          <div class="img-box">
+            <img src="./Image/Brands/816114-Product-0-I-638930464920302575_600x600.webp" alt="iPhone 17 Pro 265GB">
+          </div>
+          <div class="content mt-3">
+            <h5 class="brand">Apple</h5>
+            <h6 class="product-name">iPhone 17 Pro Max<br>512GB (Silver)</h6>
+            <div class="rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <span class="review-count">4.9(28)</span>
+            </div>
+            <div class="ticket">
+              <div class="ticket-price">$2599</div>
+            </div>
+            <a href="#" class="btn-cart-link">Add to cart</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="custom-card">
+          <div class="img-box">
+            <img src="./Image/Brands/816103-Product-0-I-638930556603040937_600x600.webp" alt="Samsung Galaxy A56">
+          </div>
+          <div class="content mt-3">
+            <h5 class="brand">Apple</h5>
+            <h6 class="product-name">iPhone 17<br>256GB (Lavender)</h6>
+            <div class="rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="bi bi-star"></i>
+              <span class="review-count">3.7(13)</span>
+            </div>
+            <div class="ticket">
+              <div class="ticket-price">$1399</div>
+            </div>
+            <a href="#" class="btn-cart-link">Add to cart</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="custom-card">
+          <div class="img-box">
+            <img src="./Image/Brands/816101-Product-0-I-638930555407962471_600x600.webp" alt="Samsung Galaxy A56">
+          </div>
+          <div class="content mt-3">
+            <h5 class="brand">Apple</h5>
+            <h6 class="product-name">iPhone 17<br>256GB (Black)</h6>
+            <div class="rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="bi bi-star"></i>
+              <span class="review-count">3.7(13)</span>
+            </div>
+            <div class="ticket">
+              <div class="ticket-price">$1399</div>
+            </div>
+            <a href="#" class="btn-cart-link">Add to cart</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="custom-card">
+          <div class="img-box">
+            <img src="./Image/Brands/746516-Product-0-I-638755863010704628_600x600.webp" alt="Samsung Galaxy A56">
+          </div>
+          <div class="content mt-3">
+            <h5 class="brand">Apple</h5>
+            <h6 class="product-name">iPhone 16e<br>128GB (Black)</h6>
+            <div class="rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="bi bi-star"></i>
+              <span class="review-count">4.0(24)</span>
+            </div>
+            <div class="ticket">
+              <div class="ticket-price">$999</div>
+            </div>
+            <a href="#" class="btn-cart-link">Add to cart</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="custom-card">
+          <div class="img-box">
+            <img src="./Image/Brands/746519-Product-0-I-638755864202370390_600x600.webp" alt="Samsung Galaxy A56">
+          </div>
+          <div class="content mt-3">
+            <h5 class="brand">Apple</h5>
+            <h6 class="product-name">iPhone 16e<br>128GB (White)</h6>
+            <div class="rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="bi bi-star"></i>
+              <span class="review-count">4.0(24)</span>
+            </div>
+            <div class="ticket">
+              <div class="ticket-price">$999</div>
+            </div>
+            <a href="#" class="btn-cart-link">Add to cart</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="custom-card">
+          <div class="img-box">
+            <img
+              src="./Image/Brands/746432-Product-0-I-638615219411710508_8edbaf29-1f1a-4dfb-b01d-39c612cba625_600x600.webp"
+              alt="Samsung Galaxy A56">
+          </div>
+          <div class="content mt-3">
+            <h5 class="brand">Apple</h5>
+            <h6 class="product-name">iPhone 16<br>128GB (Black)</h6>
+            <div class="rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+              <span class="review-count">4.6(31)</span>
+            </div>
+            <div class="ticket">
+              <div class="ticket-price">$1244</div>
+            </div>
+            <a href="#" class="btn-cart-link">Add to cart</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="custom-card">
+          <div class="img-box">
+            <img src="./Image/Brands/639168-Product-0-I-638301483010334192_600x600.webp" alt="Samsung Galaxy A56">
+          </div>
+          <div class="content mt-3">
+            <h5 class="brand">Apple</h5>
+            <h6 class="product-name">iPhone 15<br>128GB (Black)</h6>
+            <div class="rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+              <span class="review-count">4.6(127)</span>
+            </div>
+            <div class="ticket">
+              <div class="ticket-price">$1099</div>
+            </div>
+            <a href="#" class="btn-cart-link">Add to cart</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Filter Bar -->
+  <div class="container-fluid bg-black px-md-5 py-4">
+    <input type="checkbox" id="load-more-toggle" class="d-none">
+
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4" id="product-grid">
+      <div class="col">
+        <div class="featured-card-dark">
+          <div class="col">
+            <div class="custom-card">
+              <div class="img-box">
+                <img
+                  src="./Image/Brands/802505-Product-0-I-638754456003215625_d60430f8-e84b-4d8a-a108-93b5888f14d5_600x600.webp"
+                  alt="Samsung Galaxy A56">
+              </div>
+              <div class="content mt-3">
+                <h5 class="brand">NOTHING<sup>(R)</sup></h5>
+                <h6 class="product-name">NOTHING Phone (3a)Pro 5G<br>256GB (Black)</h6>
+                <div class="rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="bi bi-star"></i>
+                  <span class="review-count">3.8(10)</span>
+                </div>
+                <div class="ticket">
+                  <div class="ticket-price">$849</div>
+                </div>
+                <a href="#" class="btn-cart-link">Add to cart</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="custom-card">
+          <div class="img-box">
+            <img
+              src="./Image/Brands/802500-Product-0-I-638754454206376599_fcaae814-2a70-4531-a4d7-e14c57f8296a_600x600.webp"
+              alt="Samsung Galaxy A56">
+          </div>
+          <div class="content mt-3">
+            <h5 class="brand">NOTHING<sup>(R)</sup></h5>
+            <h6 class="product-name">NOTHING Phone (3a) 5G<br>128GB (Black)</h6>
+            <div class="rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="bi bi-star"></i>
+              <span class="review-count">4.2(18)</span>
+            </div>
+            <div class="ticket">
+              <div class="ticket-price">$599</div>
+            </div>
+            <a href="#" class="btn-cart-link">Add to cart</a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="custom-card">
+          <div class="img-box">
+            <img src="./Image/Brands/802506-Product-0-I-638755268406204514_600x600.webp" alt="Samsung Galaxy A56">
+          </div>
+          <div class="content mt-3">
+            <h5 class="brand">NOTHING<sup>(R)</sup></h5>
+            <h6 class="product-name">NOTHING Phone (3a)Pro 5G<br>256GB (Greay)</h6>
+            <div class="rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="bi bi-star"></i>
+              <span class="review-count">4.2(18)</span>
+            </div>
+            <div class="ticket">
+              <div class="ticket-price">$689</div>
+            </div>
+            <a href="#" class="btn-cart-link">Add to cart</a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="custom-card">
+          <div class="img-box">
+            <img
+              src="./Image/Brands/802504-Product-0-I-638754454803720098_4f5ea3a8-4693-4c80-ba8a-9e3b79a2051f_600x600.webp"
+              alt="Samsung Galaxy A56">
+          </div>
+          <div class="content mt-3">
+            <h5 class="brand">NOTHING<sup>(R)</sup></h5>
+            <h6 class="product-name">NOTHING Phone (3a) 5G<br>256GB (Blue)</h6>
+            <div class="rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="bi bi-star"></i>
+              <span class="review-count">4.2(18)</span>
+            </div>
+            <div class="ticket">
+              <div class="ticket-price">$689</div>
+            </div>
+            <a href="#" class="btn-cart-link">Add to cart</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col hidden-card">
+        <div class="featured-card-dark">
+          <div class="col">
+            <div class="custom-card">
+              <div class="img-box">
+                <img src="./Image/Brands/802503-Product-0-I-638755270804266706_600x600.webp" alt="Samsung Galaxy A56">
+              </div>
+              <div class="content mt-3">
+                <h5 class="brand">NOTHING<sup>(R)</sup></h5>
+                <h6 class="product-name">NOTHING Phone (3a) 5G<br>256GB (White)</h6>
+                <div class="rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="bi bi-star"></i>
+                  <span class="review-count">4.2(19)</span>
+                </div>
+                <div class="ticket">
+                  <div class="ticket-price">$689</div>
+                </div>
+                <a href="#" class="btn-cart-link">Add to cart</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col hidden-card">
+        <div class="featured-card-dark">
+          <div class="col">
+            <div class="custom-card">
+              <div class="img-box">
+                <img src="./Image/Brands/814345-Product-0-I-638862334806555496_600x600.webp" alt="Samsung Galaxy A56">
+              </div>
+              <div class="content mt-3">
+                <h5 class="brand">NOTHING<sup>(R)</sup></h5>
+                <h6 class="product-name">NOTHING Phone (3) 5G<br>256GB (Black)</h6>
+                <div class="rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <span class="review-count">4.7(9)</span>
+                </div>
+                <div class="ticket">
+                  <div class="ticket-price">$1509</div>
+                </div>
+                <a href="Add-to-cart.html" class="btn-cart-link">Add to cart</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col hidden-card">
+        <div class="featured-card-dark">
+          <div class="col">
+            <div class="custom-card">
+              <div class="img-box">
+                <img src="./Image/Brands/883650-Product-0-I-639040474805140117_600x600.webp" alt="Samsung Galaxy A56">
+              </div>
+              <div class="content mt-3">
+                <h5 class="brand">NOTHING<sup>(R)</sup></h5>
+                <h6 class="product-name">NOTHING Phone (3a) Lite 5G<br>128GB (Black)</h6>
+                <div class="rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                  <span class="review-count">3.8(10)</span>
+                </div>
+                <div class="ticket">
+                  <div class="ticket-price">$439</div>
+                </div>
+                <a href="#" class="btn-cart-link">Add to cart</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col hidden-card">
+        <div class="featured-card-dark">
+          <div class="col">
+            <div class="custom-card">
+              <div class="img-box">
+                <img src="./Image/Brands/6776dca039d94959aeeeffb530102281_600x600.webp" alt="Samsung Galaxy A56">
+              </div>
+              <div class="content mt-3">
+                <h5 class="brand">SAMSUNG</h5>
+                <h6 class="product-name">Samsung Galaxy Z Fold 5G<br>256GB (Black)</h6>
+                <div class="rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                  <span class="review-count">3.8(10)</span>
+                </div>
+                <div class="ticket">
+                  <div class="ticket-price">$741</div>
+                </div>
+                <a href="#" class="btn-cart-link">Add to cart</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col hidden-card">
+        <div class="featured-card-dark">
+          <div class="col">
+            <div class="custom-card">
+              <div class="img-box">
+                <img
+                  src="./Image/Brands/23f59982686146f68e854b92b02b6665_f5defc81-b94c-42c5-90ca-6ffb094b429d_600x600.webp"
+                  alt="Samsung Galaxy A56">
+              </div>
+              <div class="content mt-3">
+                <h5 class="brand">SAMSUNG</h5>
+                <h6 class="product-name">Samsung Galaxy S22 Ultra 5G<br>128GB (Black)</h6>
+                <div class="rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                  <span class="review-count">3.8(10)</span>
+                </div>
+                <div class="ticket">
+                  <div class="ticket-price">$566</div>
+                </div>
+                <a href="#" class="btn-cart-link">Add to cart</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col hidden-card">
+        <div class="featured-card-dark">
+          <div class="col">
+            <div class="custom-card">
+              <div class="img-box">
+                <img src="./Image/Brands/0ce8873119ce49a99402aa5c67e235dc_396dcd39-39f1-4d7b-a7b9-5664740278a9.webp"
+                  alt="Samsung Galaxy A56">
+              </div>
+              <div class="content mt-3">
+                <h5 class="brand">SAMSUNG</h5>
+                <h6 class="product-name">Samsung Galaxy S23 Plus<br>256GB (Black)</h6>
+                <div class="rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                  <span class="review-count">3.8(10)</span>
+                </div>
+                <div class="ticket">
+                  <div class="ticket-price">$659</div>
+                </div>
+                <a href="#" class="btn-cart-link">Add to cart</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col hidden-card">
+        <div class="featured-card-dark">
+          <div class="col">
+            <div class="custom-card">
+              <div class="img-box">
+                <img src="./Image/Brands/0bd0956b055e4ac3a7da5b69af14c270_8cfe123e-77f7-481d-9319-489e5bc7e14d.webp"
+                  alt="Samsung Galaxy A56">
+              </div>
+              <div class="content mt-3">
+                <h5 class="brand">SAMSUNG</h5>
+                <h6 class="product-name">Samsung Galaxy S24 Ultra<br>512GB (Orange)</h6>
+                <div class="rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                  <span class="review-count">3.8(10)</span>
+                </div>
+                <div class="ticket">
+                  <div class="ticket-price">$741</div>
+                </div>
+                <a href="#" class="btn-cart-link">Add to cart</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col hidden-card">
+        <div class="featured-card-dark">
+          <div class="col">
+            <div class="custom-card">
+              <div class="img-box">
+                <img src="./Image/Brands/2ea81dfafae04998820b0f24a246bcad.webp" alt="Samsung Galaxy A56">
+              </div>
+              <div class="content mt-3">
+                <h5 class="brand">SAMSUNG</h5>
+                <h6 class="product-name">Samsung Galaxy S23 Plus<br>256GB (Purple)</h6>
+                <div class="rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                  <span class="review-count">3.8(10)</span>
+                </div>
+                <div class="ticket">
+                  <div class="ticket-price">$741</div>
+                </div>
+                <a href="#" class="btn-cart-link">Add to cart</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col hidden-card">
+        <div class="featured-card-dark">
+          <div class="col">
+            <div class="custom-card">
+              <div class="img-box">
+                <img src="./Image/Brands/realme-p4-power-front-back.png" alt="Realme P4 Power">
+              </div>
+              <div class="content mt-3">
+                <h5 class="brand">Realme</h5>
+                <h6 class="product-name">Realme P4 Power<br>128GB (White)</h6>
+                <div class="rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                  <span class="review-count">3.8(10)</span>
+                </div>
+                <div class="ticket">
+                  <div class="ticket-price">$700</div>
+                </div>
+                <a href="#" class="btn-cart-link">Add to cart</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col hidden-card">
+        <div class="featured-card-dark">
+          <div class="col">
+            <div class="custom-card">
+              <div class="img-box">
+                <img src="./Image/Brands/realme-neo-8-2026-01-14-696725dfbad2a.webp" alt="Samsung Galaxy A56">
+              </div>
+              <div class="content mt-3">
+                <h5 class="brand">Realme</h5>
+                <h6 class="product-name">Realme Neo 8<br>256GB (Purple)</h6>
+                <div class="rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                  <span class="review-count">3.8(10)</span>
+                </div>
+                <div class="ticket">
+                  <div class="ticket-price">$600</div>
+                </div>
+                <a href="#" class="btn-cart-link">Add to cart</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col hidden-card">
+        <div class="featured-card-dark">
+          <div class="col">
+            <div class="custom-card">
+              <div class="img-box">
+                <img src="./Image/Brands/REALME_C85_5GBK-removebg-preview.png" alt="Samsung Galaxy A56">
+              </div>
+              <div class="content mt-3">
+                <h5 class="brand">Realme</h5>
+                <h6 class="product-name">Realme C85 4G<br>128GB (Black)</h6>
+                <div class="rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                  <span class="review-count">3.8(10)</span>
+                </div>
+                <div class="ticket">
+                  <div class="ticket-price">$600</div>
+                </div>
+                <a href="#" class="btn-cart-link">Add to cart</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col hidden-card">
+        <div class="featured-card-dark">
+          <div class="col">
+            <div class="custom-card">
+              <div class="img-box">
+                <img src="./Image/Brands/realme-p3-lite-4g-front-back-1.png" alt="Samsung Galaxy A56">
+              </div>
+              <div class="content mt-3">
+                <h5 class="brand">Realme</h5>
+                <h6 class="product-name">Realme P3 Lite<br>128GB (White)</h6>
+                <div class="rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                  <span class="review-count">3.8(10)</span>
+                </div>
+                <div class="ticket">
+                  <div class="ticket-price">$500</div>
+                </div>
+                <a href="#" class="btn-cart-link">Add to cart</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col hidden-card">
+        <div class="featured-card-dark">
+          <div class="col">
+            <div class="custom-card">
+              <div class="img-box">
+                <img src="./Image/Brands/LD0005969022-removebg-preview.png" alt="Samsung Galaxy A56">
+              </div>
+              <div class="content mt-3">
+                <h5 class="brand">ASUS</h5>
+                <h6 class="product-name">ASUS ROG Phone 6 Pro<br>512GB (White)</h6>
+                <div class="rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                  <span class="review-count">3.8(10)</span>
+                </div>
+                <div class="ticket">
+                  <div class="ticket-price">$681</div>
+                </div>
+                <a href="#" class="btn-cart-link">Add to cart</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col hidden-card">
+        <div class="featured-card-dark">
+          <div class="col">
+            <div class="custom-card">
+              <div class="img-box">
+                <img src="./Image/Brands/Asus-ROG-Phone-2-removebg-preview.png" alt="Samsung Galaxy A56">
+              </div>
+              <div class="content mt-3">
+                <h5 class="brand">ASUS</h5>
+                <h6 class="product-name">ASUS ROG Phone 2<br>512GB (Black)</h6>
+                <div class="rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                  <span class="review-count">3.8(10)</span>
+                </div>
+                <div class="ticket">
+                  <div class="ticket-price">$741</div>
+                </div>
+                <a href="#" class="btn-cart-link">Add to cart</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col hidden-card">
+        <div class="featured-card-dark">
+          <div class="col">
+            <div class="custom-card">
+              <div class="img-box">
+                <img src="./Image/Brands/Asus-ROG-Phone-8-Pro-removebg-preview.png" alt="Samsung Galaxy A56">
+              </div>
+              <div class="content mt-3">
+                <h5 class="brand">ASUS</h5>
+                <h6 class="product-name">ASUS ROG Phone 8 Pro<br>256GB (Greay)</h6>
+                <div class="rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                  <span class="review-count">3.8(10)</span>
+                </div>
+                <div class="ticket">
+                  <div class="ticket-price">$900</div>
+                </div>
+                <a href="#" class="btn-cart-link">Add to cart</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col hidden-card">
+        <div class="featured-card-dark">
+          <div class="col">
+            <div class="custom-card">
+              <div class="img-box">
+                <img src="./Image/Brands/fwebp.webp" alt="Samsung Galaxy A56">
+              </div>
+              <div class="content mt-3">
+                <h5 class="brand">ASUS</h5>
+                <h6 class="product-name">ASUS ROG Phone 8<br>128GB (Black)</h6>
+                <div class="rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                  <span class="review-count">3.8(10)</span>
+                </div>
+                <div class="ticket">
+                  <div class="ticket-price">$800</div>
+                </div>
+                <a href="#" class="btn-cart-link">Add to cart</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col hidden-card">
+        <div class="featured-card-dark">
+          <div class="col">
+            <div class="custom-card">
+              <div class="img-box">
+                <img src="./Image/Brands/8f4179577da0b7e6b790b58f9e6e31d9-removebg-preview.png"
+                  alt="Samsung Galaxy A56">
+              </div>
+              <div class="content mt-3">
+                <h5 class="brand">Asus</h5>
+                <h6 class="product-name">Asus ROG Phone 3<br>256GB (Black)</h6>
+                <div class="rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                  <span class="review-count">4.8(10)</span>
+                </div>
+                <div class="ticket">
+                  <div class="ticket-price">$500</div>
+                </div>
+                <a href="#" class="btn-cart-link">Add to cart</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col hidden-card">
+        <div class="featured-card-dark">
+          <div class="col">
+            <div class="custom-card">
+              <div class="img-box">
+                <img src="./Image/Brands/xiaomi_black_shark_2_pro-3_2-removebg-preview.png" alt="Samsung Galaxy A56">
+              </div>
+              <div class="content mt-3">
+                <h5 class="brand">Xiaomi</h5>
+                <h6 class="product-name">Black Shark 2 Pro<br>256GB (Black)</h6>
+                <div class="rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                  <span class="review-count">3.8(10)</span>
+                </div>
+                <div class="ticket">
+                  <div class="ticket-price">$499</div>
+                </div>
+                <a href="#" class="btn-cart-link">Add to cart</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col hidden-card">
+        <div class="featured-card-dark">
+          <div class="col">
+            <div class="custom-card">
+              <div class="img-box">
+                <img src="./Image/Brands/Xiaomi-Black-Shark-3-300x300-removebg-preview.png" alt="Samsung Galaxy A56">
+              </div>
+              <div class="content mt-3">
+                <h5 class="brand">Xiaomi</h5>
+                <h6 class="product-name">Black Shark 3<br>512GB (white)</h6>
+                <div class="rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                  <span class="review-count">3.8(10)</span>
+                </div>
+                <div class="ticket">
+                  <div class="ticket-price">$600</div>
+                </div>
+                <a href="#" class="btn-cart-link">Add to cart</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col hidden-card">
+        <div class="featured-card-dark">
+          <div class="col">
+            <div class="custom-card">
+              <div class="img-box">
+                <img src="./Image/Brands/xiaomi-black-shark-4s-pro-front-and-back-1.png" alt="Samsung Galaxy A56">
+              </div>
+              <div class="content mt-3">
+                <h5 class="brand">Xiaomi</h5>
+                <h6 class="product-name">Black Shark 4S Pro<br>512GB (White)</h6>
+                <div class="rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                  <span class="review-count">3.8(10)</span>
+                </div>
+                <div class="ticket">
+                  <div class="ticket-price">$800</div>
+                </div>
+                <a href="#" class="btn-cart-link">Add to cart</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="text-center py-5">
+      <label for="load-more-toggle" class="btn-load-more">
+        LOAD MORE PRODUCTS
+      </label>
+    </div>
+  </div>
+  <!-- Footer -->
+  <footer class="site-footer bg-black text-white py-5">
+    <div class="container">
+      <div class="row g-4">
+        <div class="footer-top d-flex justify-content-between flex-wrap">
+
+          <div class="footer-col brand">
+            <h2 class="logo">NIGHTDREAM</h2>
+            <p class="brand-desc">
+              Myanmar's leading digital hub for authentic tech reviews and the latest smartphone trends.
+            </p>
+
+            <div class="social mt-3">
+              <a href="#" class="fb"><i class="bi bi-facebook"></i></a>
+              <a href="#" class="x"><i class="bi bi-twitter-x"></i></a>
+              <a href="#" class="ig"><i class="bi bi-instagram"></i></a>
+              <a href="#" class="yt"><i class="bi bi-youtube"></i></a>
+            </div>
+          </div>
+        <div class="footer-col">
+          <h5>Explore Tech</h5>
+          <ul class="footer-links list-unstyled">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="News.html">Latest News</a></li>
+            <li><a href="Reviews.html">Expert Reviews</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Support & Deals</h5>
+          <ul class="footer-links list-unstyled">
+            <li><a href="Cash.html">Cash & Offers</a></li>
+            <li><a href="Contact.html">Contact Us</a></li>
+            <li><a href="Privacy.html">Privacy Policy</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col payments">
+          <h5>Payments</h5>
+          <div class="d-flex flex-wrap gap-2">
+            <img src="./Image/Fooder/Visa.svg.png" alt="Visa">
+            <img src="./Image/Fooder/unnamed.webp" alt="KPay">
+            <img src="./Image/Fooder/logo.2e441aa2.png" alt="Wave">
+            <img src="./Image/Fooder/Updated_logo_of_uab_Bank.jpg" alt="uab">
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- BOTTOM BAR -->
+  <div class="footer-bottom">
+    <span>© 2026 NightDraem. All rights reserved</span>
+    <div class="links">
+      <a href="#">Consumer guarantees</a>
+      <a href="Privacy.html">Privacy policy</a>
+      <a href="#">Terms of use</a>
+      <a href="#">Terms of sale</a>
+    </div>
+  </div>
+  </footer>
+
+  <!-- Footer -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
